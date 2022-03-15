@@ -7,6 +7,8 @@ public class MoveToFigthZone : MonoBehaviour
 {
     public static MoveToFigthZone moveAllyInstance;
 
+    public CheckWhoWin checkWhoWin;
+
     private void Awake()
     {
         if (moveAllyInstance == null)
@@ -49,6 +51,12 @@ public class MoveToFigthZone : MonoBehaviour
         {
             TouchOnSelection();
         }
+
+        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+        {
+            TouchOnSelection();
+        }
+
         
     }
 
@@ -60,22 +68,30 @@ public class MoveToFigthZone : MonoBehaviour
             if (hit.collider.CompareTag("AllySelect") && selectionIsChoiced == false)
             {
                 selectionObj = hit.collider.gameObject;
-                MoveTo(selectionObj);
+                StartCoroutine(MoveTo(selectionObj));
                 selectionIsChoiced = true;
 
 
-                EnemySelectChoice.enemySelectChoiceInstance.MoveSelectionEnemy();
+                EnemySelectChoice.enemySelectChoiceInstance.StartEnemyMove();
                 CheckWhatOptionIsSelected(selectionObj);
+                checkWhoWin.CheckResults();
+                //checkWhoWin.CheckResultsIfTie();
 
             }
         }
 
     }
 
-    private Tween MoveTo(GameObject obj)
+    public IEnumerator MoveTo(GameObject obj)
     {
-        Tween moveToTween = selectionObj.transform.DOMove(figthZone.transform.position, 1f);
-        return moveToTween;
+        Vector2 tempPos = selectionObj.transform.position;
+        Tween moveToTween = selectionObj.transform.DOMove(figthZone.transform.position, 0.5f);
+        yield return new WaitForSeconds(1f);
+
+        Tween returnMove = selectionObj.transform.DOMove(tempPos, 0.5f);
+        yield return returnMove.WaitForCompletion();
+        selectionIsChoiced = false;       
+
     }
 
     private void CheckWhatOptionIsSelected(GameObject selectedObj)

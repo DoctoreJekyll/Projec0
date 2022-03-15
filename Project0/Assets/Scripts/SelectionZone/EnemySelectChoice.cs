@@ -42,13 +42,22 @@ public class EnemySelectChoice : MonoBehaviour
     }
 
 
-    public void MoveSelectionEnemy()
+    public IEnumerator MoveSelectionEnemy()
     {
         randomSelection = Random.Range(0, enemyOptions.Length);
+        Vector2 tempPos;
+        tempPos = enemyOptions[randomSelection].transform.position;
 
-        enemyOptions[randomSelection].transform.DOMove(figthEnemyZone.transform.position, 1f);
-
+        enemyOptions[randomSelection].transform.DOMove(figthEnemyZone.transform.position, 0.5f);
         CheckWhatEnemySelect();
+        yield return new WaitForSeconds(1f);
+        enemyOptions[randomSelection].transform.DOMove(tempPos, 0.5f);
+
+    }
+
+    public void StartEnemyMove()
+    {
+        StartCoroutine(MoveSelectionEnemy());
     }
 
     public void CheckWhatEnemySelect()

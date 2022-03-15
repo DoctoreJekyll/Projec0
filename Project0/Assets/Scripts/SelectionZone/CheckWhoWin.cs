@@ -4,15 +4,89 @@ using UnityEngine;
 
 public class CheckWhoWin : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public MoveToFigthZone allyInstance;
+    public EnemySelectChoice enemyInstance;
+
+    public bool allyWin;
+
+    public PlayerData playerData;
+    public EnemyCreate enemy;
+
+    private void Awake()
     {
-        
+        playerData = FindObjectOfType<PlayerData>();
+        enemy = FindObjectOfType<EnemyCreate>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void CheckResults()
     {
-        
+        switch (allyInstance.selections)
+        {
+            case MoveToFigthZone.Selections.Paper:
+                if (enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.RockEnemy)
+                {
+                    AllyWin();
+                    enemy.LoseLife(playerData.atttackDamage);
+                    Debug.Log("El enemigo ha elegido piedra y tu papel, por tanto tú ganas");
+                }
+                else if((allyInstance.selections == MoveToFigthZone.Selections.Paper) && (enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.PaperEnemy))
+                {
+                    enemy.LoseLife(playerData.atttackDamage / 2);
+                }
+                else
+                {
+                    playerData.LoseLife(enemy.enemyAttack);
+                }
+                break;
+            case MoveToFigthZone.Selections.Scissor:
+                if (enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.PaperEnemy)
+                {
+                    AllyWin();
+                    enemy.LoseLife(playerData.atttackDamage);
+                    Debug.Log("El enemigo ha elegido papel y tu tijeras, por tanto tú ganas");
+                }
+                else if((allyInstance.selections == MoveToFigthZone.Selections.Scissor) && (enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.ScissorEnemy))
+                {
+                    enemy.LoseLife(playerData.atttackDamage / 2);
+                }
+                else
+                {
+                    playerData.LoseLife(enemy.enemyAttack);
+                }
+                break;
+            case MoveToFigthZone.Selections.Rock:
+                if (enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.ScissorEnemy)
+                {
+                    AllyWin();
+                    enemy.LoseLife(playerData.atttackDamage);
+                    Debug.Log("El enemigo ha elegido tijeras y tu rocas, por tanto tú ganas");
+                }
+                else if((allyInstance.selections == MoveToFigthZone.Selections.Rock) && (enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.RockEnemy))
+                {
+                    enemy.LoseLife(playerData.atttackDamage / 2);
+                }
+                else
+                {
+                    playerData.LoseLife(enemy.enemyAttack);
+                }
+                break;
+            case MoveToFigthZone.Selections.None:
+                break;
+            default:
+                break;
+        }
     }
+
+    public void AllyWin()
+    {
+        allyWin = true;
+    }
+
+    public void EnemyWin()
+    {
+        allyWin = false;
+    }
+
 }
