@@ -13,13 +13,13 @@ TextureImporter:
     second: GUI_4x_sliced_2
   - first:
       213: -7006084822487186348
-    second: GUI_4x_sliced_3
+    second: Marc00
   - first:
       213: 206389296482379423
-    second: GUI_4x_sliced_4
+    second: Marc01
   - first:
       213: 4791255897390438304
-    second: GUI_4x_sliced_5
+    second: Marc03
   - first:
       213: -8433994722181024841
     second: GUI_4x_sliced_6
@@ -70,10 +70,10 @@ TextureImporter:
     second: GUI_4x_sliced_21
   - first:
       213: -8996035672257939246
-    second: GUI_4x_sliced_22
+    second: Marc04
   - first:
       213: -4083939759306511207
-    second: GUI_4x_sliced_23
+    second: Marc08
   - first:
       213: -8338635885636457696
     second: GUI_4x_sliced_24
@@ -109,10 +109,10 @@ TextureImporter:
     second: GUI_4x_sliced_34
   - first:
       213: -4007719957828671990
-    second: GUI_4x_sliced_35
+    second: Marc05
   - first:
       213: -437736431647656274
-    second: GUI_4x_sliced_36
+    second: Marc07
   - first:
       213: -8066905616996051830
     second: GUI_4x_sliced_37
@@ -127,7 +127,7 @@ TextureImporter:
     second: GUI_4x_sliced_40
   - first:
       213: -8449041368308671264
-    second: GUI_4x_sliced_41
+    second: Marc06
   - first:
       213: -4373606604496714650
     second: GUI_4x_sliced_42
@@ -382,10 +382,10 @@ TextureImporter:
     second: GUI_4x_sliced_125
   - first:
       213: 2847845719824119697
-    second: GUI_4x_sliced_126
+    second: selection00
   - first:
       213: -1912591494456599498
-    second: GUI_4x_sliced_127
+    second: selection01
   - first:
       213: -6833762248369561560
     second: GUI_4x_sliced_128
@@ -424,10 +424,10 @@ TextureImporter:
     second: GUI_4x_sliced_139
   - first:
       213: 8087446489962339614
-    second: GUI_4x_sliced_140
+    second: selection02
   - first:
       213: -5385404084621542452
-    second: GUI_4x_sliced_141
+    second: selection03
   - first:
       213: -4833922992149950322
     second: GUI_4x_sliced_142
@@ -712,7 +712,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 45
+  spritePixelsToUnits: 60
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -844,15 +844,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_3
+      name: Marc00
       rect:
         serializedVersion: 2
         x: 324
         y: 580
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -865,15 +865,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_4
+      name: Marc01
       rect:
         serializedVersion: 2
         x: 360
         y: 608
         width: 32
         height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -886,15 +886,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_5
+      name: Marc03
       rect:
         serializedVersion: 2
         x: 396
         y: 580
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1243,7 +1243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_22
+      name: Marc04
       rect:
         serializedVersion: 2
         x: 324
@@ -1264,7 +1264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_23
+      name: Marc08
       rect:
         serializedVersion: 2
         x: 424
@@ -1516,15 +1516,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_35
+      name: Marc05
       rect:
         serializedVersion: 2
         x: 324
         y: 508
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1537,15 +1537,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_36
+      name: Marc07
       rect:
         serializedVersion: 2
         x: 396
         y: 508
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1642,15 +1642,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_41
+      name: Marc06
       rect:
         serializedVersion: 2
         x: 360
         y: 508
         width: 32
         height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3427,7 +3427,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_126
+      name: selection00
       rect:
         serializedVersion: 2
         x: 436
@@ -3448,7 +3448,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_127
+      name: selection01
       rect:
         serializedVersion: 2
         x: 472
@@ -3721,7 +3721,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_140
+      name: selection02
       rect:
         serializedVersion: 2
         x: 436
@@ -3742,7 +3742,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_141
+      name: selection03
       rect:
         serializedVersion: 2
         x: 472

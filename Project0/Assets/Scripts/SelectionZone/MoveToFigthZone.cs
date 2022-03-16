@@ -85,10 +85,10 @@ public class MoveToFigthZone : MonoBehaviour
     public IEnumerator MoveTo(GameObject obj)
     {
         Vector2 tempPos = selectionObj.transform.position;
-        Tween moveToTween = selectionObj.transform.DOMove(figthZone.transform.position, 0.5f);
-        yield return new WaitForSeconds(1f);
+        Tween moveToTween = selectionObj.transform.DOMove(figthZone.transform.position, 0.4f);
+        yield return new WaitForSeconds(0.75f);
 
-        Tween returnMove = selectionObj.transform.DOMove(tempPos, 0.5f);
+        Tween returnMove = selectionObj.transform.DOMove(tempPos, 0.4f);
         yield return returnMove.WaitForCompletion();
         selectionIsChoiced = false;       
 

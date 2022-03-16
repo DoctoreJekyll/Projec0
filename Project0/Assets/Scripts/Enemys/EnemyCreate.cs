@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyCreate : MonoBehaviour
 {
-    public EnemyData enemyData;
+    public EnemyData[] enemyData;
+    private int index;
 
     [Header("Enemy Info")]
     public string enemyName;
@@ -22,12 +23,7 @@ public class EnemyCreate : MonoBehaviour
 
     private void Start()
     {
-        enemyName = enemyData.name;
-        enemyLife = enemyData.enemyLife;
-        enemyAttack = enemyData.enemyAttack;
-        enemyLevel = enemyData.enemyLevel;
-        enemySprite = enemyData.enemySprite;
-        spriteRenderer.sprite = enemySprite;
+        LoadScriptableData();
     }
 
     public void HitPlayer(float amount)
@@ -48,7 +44,13 @@ public class EnemyCreate : MonoBehaviour
     {
         Debug.Log(enemyLife);
 
-        if (enemyLife <= 0) Destroy(gameObject);
+        if (enemyLife <= 0) LoadNextScriptable();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            LoadNextScriptable();
+        }
+
     }
 
     private IEnumerator LoseLifeAnimTemp()
@@ -59,5 +61,20 @@ public class EnemyCreate : MonoBehaviour
         spriteRenderer.color = Color.white;
     }
 
+    public void LoadScriptableData()
+    {
+        enemyName = enemyData[index].name;
+        enemyLife = enemyData[index].enemyLife;
+        enemyAttack = enemyData[index].enemyAttack;
+        enemyLevel = enemyData[index].enemyLevel;
+        enemySprite = enemyData[index].enemySprite;
+        spriteRenderer.sprite = enemySprite;
+    }
+
+    private void LoadNextScriptable()
+    {
+        index++;
+        LoadScriptableData();
+    }
 
 }

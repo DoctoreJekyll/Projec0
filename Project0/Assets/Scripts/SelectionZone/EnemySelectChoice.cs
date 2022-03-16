@@ -48,10 +48,10 @@ public class EnemySelectChoice : MonoBehaviour
         Vector2 tempPos;
         tempPos = enemyOptions[randomSelection].transform.position;
 
-        enemyOptions[randomSelection].transform.DOMove(figthEnemyZone.transform.position, 0.5f);
+        enemyOptions[randomSelection].transform.DOMove(figthEnemyZone.transform.position, 0.4f);
         CheckWhatEnemySelect();
-        yield return new WaitForSeconds(1f);
-        enemyOptions[randomSelection].transform.DOMove(tempPos, 0.5f);
+        yield return new WaitForSeconds(0.75f);
+        enemyOptions[randomSelection].transform.DOMove(tempPos, 0.4f);
 
     }
 

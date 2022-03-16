@@ -44,6 +44,12 @@ TextureImporter:
   - first:
       213: -6845342836570240579
     second: GUI00
+  - first:
+      213: -998291784836284298
+    second: selec00
+  - first:
+      213: 6485564868748555955
+    second: selec01
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -446,6 +452,48 @@ TextureImporter:
       bones: []
       spriteID: db9477455f47001a0800000000000000
       internalID: -6845342836570240579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selec00
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67084ae29ea5522f0800000000000000
+      internalID: -998291784836284298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: selec01
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b6b289d2ea510a50800000000000000
+      internalID: 6485564868748555955
       vertices: []
       indices: 
       edges: []
