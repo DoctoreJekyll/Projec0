@@ -10,6 +10,8 @@ public class PlayerData : MonoBehaviour
     public float totalExp;
     public int playerLevel;
     private SpriteRenderer spriteRenderer;
+    public bool playerIsLife;
+    [SerializeField] GameObject playerShadow;
 
     [Header("Init Values")]
     public float initLife;
@@ -23,10 +25,11 @@ public class PlayerData : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        maxLife = 100f;
+        maxLife = 200f;
         life = maxLife;
         atttackDamage = 10f;
         initAttackDamage = 10f;
+        playerIsLife = true;
     }
 
     //public void HitEnemy(float amount)
@@ -51,9 +54,16 @@ public class PlayerData : MonoBehaviour
 
     private void Update()
     {
+        PlayerDie();
+    }
+
+    private void PlayerDie()//Temp
+    {
         if (life <= 0)
         {
-            Destroy(this.gameObject);
+            playerIsLife = false;
+            spriteRenderer.enabled = false;
+            playerShadow.SetActive(false);
         }
     }
 

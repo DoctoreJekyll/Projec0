@@ -34,17 +34,27 @@ public class EnemyCreate : MonoBehaviour
     public void LoseLife(float amount)
     {
         enemyLife -= amount;
-        StartCoroutine(LoseLifeAnimTemp());
-        Debug.Log("El enemigo Ha perdido vida");
+        if (enemyLife > 0)
+        {
+            StartCoroutine(LoseLifeAnimTemp());
+        }
+        else if (enemyLife <= 0)
+        {
+            StopAllCoroutines();
+        }
+
     }
 
-
+    //Llamar a método que: Cuando el enemigo muera instancies cierta animación, éste método además de eso desactiva el sprite, el método que sume el index se llamará con una animación o shader de entrar y cargará todos los datos
 
     private void Update()
     {
         Debug.Log(enemyLife);
 
-        if (enemyLife <= 0) LoadNextScriptable();
+        if (enemyLife <= 0)
+        {
+            LoadNextScriptable();
+        } 
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -55,9 +65,8 @@ public class EnemyCreate : MonoBehaviour
 
     private IEnumerator LoseLifeAnimTemp()
     {
-        yield return new WaitForSeconds(0.5f);
         spriteRenderer.color = Color.red;
-        yield return new WaitForSeconds(0.35f);
+        yield return new WaitForSeconds(0.25f);
         spriteRenderer.color = Color.white;
     }
 

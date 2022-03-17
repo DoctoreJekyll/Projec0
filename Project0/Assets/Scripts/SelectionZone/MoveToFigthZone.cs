@@ -9,6 +9,7 @@ public class MoveToFigthZone : MonoBehaviour
 
     public CheckWhoWin checkWhoWin;
 
+    [SerializeField] private PlayerData playerData;
     private void Awake()
     {
         if (moveAllyInstance == null)
@@ -47,12 +48,12 @@ public class MoveToFigthZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && playerData.playerIsLife == true)
         {
             TouchOnSelection();
         }
 
-        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
+        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began && playerData.playerIsLife == true)
         {
             TouchOnSelection();
         }
@@ -86,7 +87,9 @@ public class MoveToFigthZone : MonoBehaviour
     {
         Vector2 tempPos = selectionObj.transform.position;
         Tween moveToTween = selectionObj.transform.DOMove(figthZone.transform.position, 0.4f);
-        yield return new WaitForSeconds(0.75f);
+        yield return moveToTween.WaitForCompletion();
+
+        yield return new WaitForSeconds(0.5f);
 
         Tween returnMove = selectionObj.transform.DOMove(tempPos, 0.4f);
         yield return returnMove.WaitForCompletion();
