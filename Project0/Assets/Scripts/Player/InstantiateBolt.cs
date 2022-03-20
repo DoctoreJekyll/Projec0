@@ -6,18 +6,26 @@ public class InstantiateBolt : MonoBehaviour
 {
 
     [SerializeField] private GameObject bolt;
+    [SerializeField] private GameObject miniBolt;
 
 
-    public IEnumerator InstantiateBasicAttack()//TEMPORAL
+    public void InstantiateBasicAttack()//TEMPORAL
     {
-        yield return new WaitForSeconds(0.35f);
+        //yield return new WaitForSeconds(0.35f);
         Instantiate(bolt, transform.position, Quaternion.identity);
-        CameraShake.Shake(0.1f, 0.15f);
+        CameraShake.Shake(0.1f, 0.18f);
     }
 
     public void Sorry()
     {
-        StartCoroutine(InstantiateBasicAttack());
+        InstantiateBasicAttack();
+    }
+
+
+    public void InstantiateMiniBolt()
+    {
+        Instantiate(miniBolt, transform.position, Quaternion.identity);
+        CameraShake.Shake(0.1f, 0.1f);
     }
 
 

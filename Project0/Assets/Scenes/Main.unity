@@ -2287,7 +2287,7 @@ AudioSource:
   m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -3582,7 +3582,7 @@ GameObject:
   - component: {fileID: 937259953}
   - component: {fileID: 937259952}
   m_Layer: 0
-  m_Name: Tester
+  m_Name: AttackController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3601,6 +3601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bolt: {fileID: 2250909769816025683, guid: da946b23de38f7449ad9553b764c9da8, type: 3}
+  miniBolt: {fileID: 7896758304933095930, guid: e1848639d7566d446b7d9265196cb99a, type: 3}
 --- !u!4 &937259953
 Transform:
   m_ObjectHideFlags: 0
@@ -6334,10 +6335,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData:
+  - {fileID: 11400000, guid: 8498cefbc4cfef9498d9334706810c3c, type: 2}
   - {fileID: 11400000, guid: 27c9b3deb88e9f04cb6c47348b95e458, type: 2}
-  - {fileID: 11400000, guid: 7220a7c4120316e4596b7fa099797d64, type: 2}
+  - {fileID: 11400000, guid: 6c363cd57ab62f84dacf2774dac5ea2e, type: 2}
+  - {fileID: 11400000, guid: d1f0b0cd03dfecb4ca75d806f78b37ad, type: 2}
+  - {fileID: 11400000, guid: 1d338a806d2e5ca489b3c3407e7cd215, type: 2}
   - {fileID: 11400000, guid: 561905bb74328eb41b0bd87ffadc2a20, type: 2}
   - {fileID: 11400000, guid: 3f8d4119f30c6e64297c1d704c1d27f1, type: 2}
+  - {fileID: 11400000, guid: 04b0d1603774cd046b74b47e0a410cef, type: 2}
+  - {fileID: 11400000, guid: 7220a7c4120316e4596b7fa099797d64, type: 2}
   - {fileID: 11400000, guid: 49049d1e7f1f466438e75a7bb3c4ede6, type: 2}
   enemyName: 
   enemyLife: 0

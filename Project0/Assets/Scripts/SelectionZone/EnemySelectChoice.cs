@@ -48,11 +48,12 @@ public class EnemySelectChoice : MonoBehaviour
         Vector2 tempPos;
         tempPos = enemyOptions[randomSelection].transform.position;
 
-        Tween enemyTween = enemyOptions[randomSelection].transform.DOMove(figthEnemyZone.transform.position, 0.4f);
-        CheckWhatEnemySelect();
+
+        Tween enemyTween = enemyOptions[randomSelection].transform.DOMove(figthEnemyZone.transform.position, 0.35f);
         yield return enemyTween.WaitForCompletion();
-        yield return new WaitForSeconds(0.5f);
-        enemyOptions[randomSelection].transform.DOMove(tempPos, 0.4f);
+        CheckWhatEnemySelect();
+        yield return new WaitForSeconds(0.25f);
+        enemyOptions[randomSelection].transform.DOMove(tempPos, 0.35f);
 
     }
 
@@ -66,17 +67,14 @@ public class EnemySelectChoice : MonoBehaviour
         switch (randomSelection)
         {
             case 0:
-                Debug.Log("El enemigo a elegido la roca");
                 selectionsEnemy = SelectionsEnemy.RockEnemy;
                 break;
 
             case 1:
-                Debug.Log("El enemigo a elegido la papel");
                 selectionsEnemy = SelectionsEnemy.PaperEnemy;
                 break;
 
             case 2:
-                Debug.Log("El enemigo a elegido la tijera");
                 selectionsEnemy = SelectionsEnemy.ScissorEnemy;
                 break;
 

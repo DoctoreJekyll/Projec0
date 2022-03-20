@@ -75,7 +75,7 @@ public class MoveToFigthZone : MonoBehaviour
 
                 EnemySelectChoice.enemySelectChoiceInstance.StartEnemyMove();
                 CheckWhatOptionIsSelected(selectionObj);
-                checkWhoWin.CheckResults();
+                
                 //checkWhoWin.CheckResultsIfTie();
 
             }
@@ -86,12 +86,13 @@ public class MoveToFigthZone : MonoBehaviour
     public IEnumerator MoveTo(GameObject obj)
     {
         Vector2 tempPos = selectionObj.transform.position;
-        Tween moveToTween = selectionObj.transform.DOMove(figthZone.transform.position, 0.4f);
+        Tween moveToTween = selectionObj.transform.DOMove(figthZone.transform.position, 0.35f);
         yield return moveToTween.WaitForCompletion();
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
+        checkWhoWin.CheckResults();
 
-        Tween returnMove = selectionObj.transform.DOMove(tempPos, 0.4f);
+        Tween returnMove = selectionObj.transform.DOMove(tempPos, 0.35f);
         yield return returnMove.WaitForCompletion();
         selectionIsChoiced = false;       
 
@@ -102,17 +103,14 @@ public class MoveToFigthZone : MonoBehaviour
         switch (selectedObj.name)
         {
             case "Rock":
-                Debug.Log("El player ha seleccionado la roca");
                 selections = Selections.Rock;
                 break;
 
             case "Paper":
-                Debug.Log("El player ha seleccionado el papel");
                 selections = Selections.Paper;
                 break;
 
             case "Scissor":
-                Debug.Log("El player ha seleccionado la tijera");
                 selections = Selections.Scissor;
                 break;
 

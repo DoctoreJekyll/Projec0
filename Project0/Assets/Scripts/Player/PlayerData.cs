@@ -46,9 +46,9 @@ public class PlayerData : MonoBehaviour
 
     private IEnumerator LoseLifeAnimTemp()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = Color.red;
-        yield return new WaitForSeconds(0.35f);
+        yield return new WaitForSeconds(0.25f);
         spriteRenderer.color = Color.white;
     }
 

@@ -23,7 +23,12 @@ public class EnemyCreate : MonoBehaviour
 
     private void Start()
     {
-        LoadScriptableData();
+        enemyName = enemyData[index].name;
+        enemyLife = enemyData[index].enemyLife;
+        enemyAttack = enemyData[index].enemyAttack;
+        enemyLevel = enemyData[index].enemyLevel;
+        enemySprite = enemyData[index].enemySprite;
+        spriteRenderer.sprite = enemySprite;
     }
 
     public void HitPlayer(float amount)
@@ -49,18 +54,32 @@ public class EnemyCreate : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(enemyLife);
-
-        if (enemyLife <= 0)
-        {
-            LoadNextScriptable();
-        } 
+        Die();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             LoadNextScriptable();
         }
 
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            StartCoroutine(FadeToCero(0f, 0.3f));
+            
+        }else if (Input.GetKeyDown(KeyCode.D))
+        {
+            StartCoroutine(FadeToCero(1f, 0.3f));
+        }
+
+
+    }
+
+    public void Die()
+    {
+
+        if (enemyLife <= 0)
+        {
+            StartCoroutine(FadeToCero(0f, 0.5f));
+        }
     }
 
     private IEnumerator LoseLifeAnimTemp()
@@ -78,6 +97,8 @@ public class EnemyCreate : MonoBehaviour
         enemyLevel = enemyData[index].enemyLevel;
         enemySprite = enemyData[index].enemySprite;
         spriteRenderer.sprite = enemySprite;
+
+        StopAllCoroutines();
     }
 
     private void LoadNextScriptable()
@@ -85,5 +106,35 @@ public class EnemyCreate : MonoBehaviour
         index++;
         LoadScriptableData();
     }
+
+
+    IEnumerator FadeToCero(float aValue, float aTime)
+    {
+        float alpha = transform.GetComponent<SpriteRenderer>().color.a;
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+        {
+            Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
+            transform.GetComponent<SpriteRenderer>().color = newColor;
+            yield return null;
+        }
+        LoadNextScriptable();
+        StartCoroutine(FadeToOne(1, 0.3f));
+
+    }
+
+    IEnumerator FadeToOne(float aValue, float aTime)
+    {
+        float alpha = transform.GetComponent<SpriteRenderer>().color.a;
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+        {
+            Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
+            transform.GetComponent<SpriteRenderer>().color = newColor;
+            yield return null;
+        }
+
+
+
+    }
+
 
 }
