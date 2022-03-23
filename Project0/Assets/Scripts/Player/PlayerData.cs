@@ -7,7 +7,7 @@ public class PlayerData : MonoBehaviour
     [Header("Player Data")]
     public float life;
     public float atttackDamage;
-    public float totalExp;
+    public float gold;
     public int playerLevel;
     private SpriteRenderer spriteRenderer;
     public bool playerIsLife;
@@ -18,14 +18,14 @@ public class PlayerData : MonoBehaviour
     public float initAttackDamage;
     public float initExp;
 
-    [HideInInspector]public float maxLife;
+    public float maxLife;
     [HideInInspector]public float maxAttackDamage;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        maxLife = 200f;
+        //maxLife = 200f;
         life = maxLife;
         atttackDamage = 10f;
         initAttackDamage = 10f;

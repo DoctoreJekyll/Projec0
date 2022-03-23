@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyCreate : MonoBehaviour
 {
@@ -55,6 +56,7 @@ public class EnemyCreate : MonoBehaviour
     private void Update()
     {
         Die();
+        LoadHud();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -117,7 +119,12 @@ public class EnemyCreate : MonoBehaviour
             transform.GetComponent<SpriteRenderer>().color = newColor;
             yield return null;
         }
-        LoadNextScriptable();
+
+        if (index <= enemyData.Length - 1)
+        {
+            LoadNextScriptable();
+        }
+
         StartCoroutine(FadeToOne(1, 0.3f));
 
     }
@@ -132,8 +139,15 @@ public class EnemyCreate : MonoBehaviour
             yield return null;
         }
 
+    }
 
 
+    private void LoadHud()
+    {
+        if (index == enemyData.Length)
+        {
+            SceneManager.LoadScene("Hud");
+        }
     }
 
 
