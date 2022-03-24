@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a420f9001fac04fa32db796eb102e1, type: 3}
+  m_Name: Ghost
+  m_EditorClassIdentifier: 
+  enemyName: Ghost
+  enemyLevel: 12
+  enemyAttack: 40
+  enemyLife: 160
+  gold: 20
+  enemySprite: {fileID: -3858331487878545982, guid: 87b114afbad5b0145baff3c400876e05, type: 3}

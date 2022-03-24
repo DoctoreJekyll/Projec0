@@ -7,9 +7,11 @@ public class EnemyData : ScriptableObject
 {
 
     public string enemyName;
-    public float enemyLife;
-    public float enemyAttack;
     public int enemyLevel;
+    public float enemyAttack;
+    public float enemyLife;
+    public int gold;
+
 
     public Sprite enemySprite;
 
