@@ -13,6 +13,7 @@ public class EnemyCreate : MonoBehaviour
     public float enemyLife;
     public float enemyAttack;
     public int enemyLevel;
+    public int goldDropped;
     public Sprite enemySprite;
 
     private SpriteRenderer spriteRenderer;
@@ -28,6 +29,7 @@ public class EnemyCreate : MonoBehaviour
         enemyLife = enemyData[index].enemyLife;
         enemyAttack = enemyData[index].enemyAttack;
         enemyLevel = enemyData[index].enemyLevel;
+        goldDropped = enemyData[index].gold;
         enemySprite = enemyData[index].enemySprite;
         spriteRenderer.sprite = enemySprite;
     }
@@ -81,6 +83,7 @@ public class EnemyCreate : MonoBehaviour
         if (enemyLife <= 0)
         {
             StartCoroutine(FadeToCero(0f, 0.5f));
+
         }
     }
 
@@ -122,6 +125,8 @@ public class EnemyCreate : MonoBehaviour
 
         if (index <= enemyData.Length - 1)
         {
+            GameManager.Instance.AddGold(goldDropped);
+            GameManager.Instance.SaveGold();
             LoadNextScriptable();
         }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerData : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class PlayerData : MonoBehaviour
     public float gold;
     public int playerLevel;
     private SpriteRenderer spriteRenderer;
+
+    [Header("Other Player Stuffs")]
     public bool playerIsLife;
     [SerializeField] GameObject playerShadow;
 
@@ -54,7 +57,18 @@ public class PlayerData : MonoBehaviour
 
     private void Update()
     {
+        PlayerStats();
+        
         PlayerDie();
+
+    }
+
+    public void PlayerStats()
+    {
+        gold = GameManager.Instance.gameGold;
+        life = GameManager.Instance.playerLifeManager;
+        atttackDamage = GameManager.Instance.playerAttackManager;
+        playerLevel = GameManager.Instance.playerLevel;
     }
 
     private void PlayerDie()//Temp
@@ -64,6 +78,7 @@ public class PlayerData : MonoBehaviour
             playerIsLife = false;
             spriteRenderer.enabled = false;
             playerShadow.SetActive(false);
+            SceneManager.LoadScene("Hub");
         }
     }
 
