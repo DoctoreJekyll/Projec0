@@ -8,7 +8,7 @@ public class PlayerData : MonoBehaviour
     [Header("Player Data")]
     public float life;
     public float atttackDamage;
-    public float gold;
+    public int gold;
     public int playerLevel;
     private SpriteRenderer spriteRenderer;
 
@@ -35,12 +35,6 @@ public class PlayerData : MonoBehaviour
         playerIsLife = true;
     }
 
-    //public void HitEnemy(float amount)
-    //{
-    //    EnemyCreate enemyCreate = FindObjectOfType<EnemyCreate>();
-    //    enemyCreate.LoseLife(atttackDamage);
-    //}
-
     public void LoseLife(float amount)
     {
         life -= amount;
@@ -56,20 +50,12 @@ public class PlayerData : MonoBehaviour
     }
 
     private void Update()
-    {
-        PlayerStats();
-        
+    {      
         PlayerDie();
-
+        GoldBag();
+        Debug.Log(gold);
     }
 
-    public void PlayerStats()
-    {
-        gold = GameManager.Instance.gameGold;
-        life = GameManager.Instance.playerLifeManager;
-        atttackDamage = GameManager.Instance.playerAttackManager;
-        playerLevel = GameManager.Instance.playerLevel;
-    }
 
     private void PlayerDie()//Temp
     {
@@ -80,6 +66,12 @@ public class PlayerData : MonoBehaviour
             playerShadow.SetActive(false);
             SceneManager.LoadScene("Hub");
         }
+    }
+
+
+    public void GoldBag()
+    {
+        gold = PlayerPrefs.GetInt("Gold");
     }
 
 

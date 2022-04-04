@@ -123,10 +123,10 @@ public class EnemyCreate : MonoBehaviour
             yield return null;
         }
 
+        GiveGoldToPlayer();
+
         if (index <= enemyData.Length - 1)
         {
-            GameManager.Instance.AddGold(goldDropped);
-            GameManager.Instance.SaveGold();
             LoadNextScriptable();
         }
 
@@ -156,4 +156,21 @@ public class EnemyCreate : MonoBehaviour
     }
 
 
+    /////////////////////////////////////////////////////////////////////GOLD STUFF/////////////////////////////////////////////////////////////////
+
+
+    public void GoldDrop()
+    {
+        PlayerPrefs.SetInt("Gold", goldDropped);
+        PlayerPrefs.Save();
+    }
+
+    public void GiveGoldToPlayer()
+    {
+        PlayerData playerData = FindObjectOfType<PlayerData>();
+        playerData.gold += goldDropped;
+        PlayerPrefs.SetInt("Gold", playerData.gold);
+        PlayerPrefs.Save();
+
+    }
 }
