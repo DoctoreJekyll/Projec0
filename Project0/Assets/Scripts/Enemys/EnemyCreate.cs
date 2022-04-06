@@ -11,6 +11,7 @@ public class EnemyCreate : MonoBehaviour
     [Header("Enemy Info")]
     public string enemyName;
     public float enemyLife;
+    public float enemyLifeMax;
     public float enemyAttack;
     public int enemyLevel;
     public int goldDropped;
@@ -32,6 +33,8 @@ public class EnemyCreate : MonoBehaviour
         goldDropped = enemyData[index].gold;
         enemySprite = enemyData[index].enemySprite;
         spriteRenderer.sprite = enemySprite;
+
+        enemyLifeMax = enemyLife;
     }
 
     public void HitPlayer(float amount)
@@ -57,6 +60,7 @@ public class EnemyCreate : MonoBehaviour
 
     private void Update()
     {
+
         Die();
         LoadHud();
 
@@ -102,6 +106,8 @@ public class EnemyCreate : MonoBehaviour
         enemyLevel = enemyData[index].enemyLevel;
         enemySprite = enemyData[index].enemySprite;
         spriteRenderer.sprite = enemySprite;
+
+        enemyLifeMax = enemyLife;
 
         StopAllCoroutines();
     }
@@ -151,7 +157,7 @@ public class EnemyCreate : MonoBehaviour
     {
         if (index == enemyData.Length)
         {
-            SceneManager.LoadScene("Hud");
+            SceneManager.LoadScene("Hub");
         }
     }
 
@@ -170,7 +176,7 @@ public class EnemyCreate : MonoBehaviour
         PlayerData playerData = FindObjectOfType<PlayerData>();
         playerData.gold += goldDropped;
         PlayerPrefs.SetInt("Gold", playerData.gold);
-        PlayerPrefs.Save();
+        PlayerPrefs.Save();     
 
     }
 }
