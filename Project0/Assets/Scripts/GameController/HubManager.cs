@@ -47,7 +47,7 @@ public class HubManager : MonoBehaviour
 
     public void IncreasePlayerStats()
     {
-        if (goldNecesaryToUpgrade < PlayerPrefs.GetInt("Gold"))
+        if (goldNecesaryToUpgrade <= PlayerPrefs.GetInt("Gold"))
         {
             int newAmountGold = PlayerPrefs.GetInt("Gold") - goldNecesaryToUpgrade;
             PlayerPrefs.SetInt("Gold", newAmountGold);
@@ -88,6 +88,41 @@ public class HubManager : MonoBehaviour
         int newLevel = PlayerPrefs.GetInt("Level") + extraLevel;
         PlayerPrefs.SetInt("Level", newLevel);
     }
+
+    /// <summary>
+    /// ///////////////////////////////POWER UPS MÉTODOS
+    /// </summary>
+    /// 
+
+    public void IncreaseHealtMagic()
+    {
+        if (goldNecesaryToUpgrade <= PlayerPrefs.GetInt("Gold"))
+        {
+
+            PlayerPrefs.Save();
+        }
+        else
+        {
+
+            Debug.Log("U cant purchase this!");
+        }
+    }
+
+
+    public void IncreaseAirMagic()
+    {
+        if (goldNecesaryToUpgrade <= PlayerPrefs.GetInt("Gold"))
+        {
+
+            PlayerPrefs.Save();
+        }
+        else
+        {
+
+            Debug.Log("U cant purchase this!");
+        }
+    }
+    
 
     public void DeleteAllData()
     {
