@@ -26,12 +26,47 @@ public class PlayerData : MonoBehaviour
 
     [HideInInspector]public float maxAttackDamage;
 
+    private void Awake()
+    {
+
+        PlayerPrefsInit();
+
+    }
+
+    private void PlayerPrefsInit()
+    {
+        if (!PlayerPrefs.HasKey("Level"))
+        {
+            PlayerPrefs.SetInt("Level", 1);
+            PlayerPrefs.Save();
+        }
+
+        if (!PlayerPrefs.HasKey("Life"))
+        {
+            PlayerPrefs.SetFloat("Life", 100f);
+            PlayerPrefs.Save();
+        }
+
+        if (!PlayerPrefs.HasKey("Damage"))
+        {
+            PlayerPrefs.SetFloat("Damage", 20f);
+            PlayerPrefs.Save();
+        }
+
+        if (!PlayerPrefs.HasKey("Gold"))
+        {
+            PlayerPrefs.SetInt("Gold", 0);
+            PlayerPrefs.Save();
+        }
+    }
+
     private void Start()
     {
+        maxLife = PlayerPrefs.GetFloat("Life");
+        atttackDamage = PlayerPrefs.GetFloat("Damage");
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         life = maxLife;
-        atttackDamage = 10f;
         playerIsLife = true;
     }
 
@@ -54,6 +89,11 @@ public class PlayerData : MonoBehaviour
         PlayerDie();
         GoldBag();
         Debug.Log(gold);
+
+        if (life > maxLife)
+        {
+            life = maxLife;
+        }
     }
 
 

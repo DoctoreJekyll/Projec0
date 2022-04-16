@@ -40,7 +40,7 @@ TextureImporter:
     second: GUI_4x_11
   - first:
       213: -7379964143135913791
-    second: GUI_4x_12
+    second: Life
   - first:
       213: -6845342836570240579
     second: GUI00
@@ -59,6 +59,15 @@ TextureImporter:
   - first:
       213: 9033426683465942916
     second: GUI_4x_18
+  - first:
+      213: -5698335365643599524
+    second: gold
+  - first:
+      213: 8964517506000033612
+    second: Magic1
+  - first:
+      213: -3136663779302286116
+    second: Magic2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -424,7 +433,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_12
+      name: Life
       rect:
         serializedVersion: 2
         x: 256
@@ -432,7 +441,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -516,7 +525,7 @@ TextureImporter:
         width: 97
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -537,7 +546,7 @@ TextureImporter:
         width: 64
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -558,7 +567,7 @@ TextureImporter:
         width: 64
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -566,6 +575,69 @@ TextureImporter:
       bones: []
       spriteID: 487c58c15bd2d5d70800000000000000
       internalID: 9033426683465942916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gold
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 128
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5184cf0d227be0b0800000000000000
+      internalID: -5698335365643599524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic1
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 159
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4717e7fc2d586c70800000000000000
+      internalID: 8964517506000033612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic2
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 159
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc5ad659e45874d0800000000000000
+      internalID: -3136663779302286116
       vertices: []
       indices: 
       edges: []

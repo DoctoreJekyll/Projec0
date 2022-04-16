@@ -20,6 +20,8 @@ public class MoveToFigthZone : MonoBehaviour
         {
             Destroy(this);
         }
+
+        playerData = FindObjectOfType<PlayerData>();
     }
 
 

@@ -4,13 +4,13 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8379833317817340655
-    second: GUI_4x_sliced_0
+    second: 1
   - first:
       213: -5930546453780020944
-    second: GUI_4x_sliced_1
+    second: 2
   - first:
       213: -4577894306521286495
-    second: GUI_4x_sliced_2
+    second: 3
   - first:
       213: -7006084822487186348
     second: Marc00
@@ -49,13 +49,13 @@ TextureImporter:
     second: GUI_4x_sliced_14
   - first:
       213: -1919652691228993526
-    second: GUI_4x_sliced_15
+    second: 4
   - first:
       213: 4085047063689490700
-    second: GUI_4x_sliced_16
+    second: 5
   - first:
       213: -5073677880472477409
-    second: GUI_4x_sliced_17
+    second: 6
   - first:
       213: 7633382102462257233
     second: GUI_4x_sliced_18
@@ -85,13 +85,13 @@ TextureImporter:
     second: GUI_4x_sliced_26
   - first:
       213: -5458143785048740508
-    second: GUI_4x_sliced_27
+    second: 7
   - first:
       213: 9129535881415466146
-    second: GUI_4x_sliced_28
+    second: 8
   - first:
       213: -2017066206344193445
-    second: GUI_4x_sliced_29
+    second: 9
   - first:
       213: 1127577969776856713
     second: GUI_4x_sliced_30
@@ -781,7 +781,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GUI_4x_sliced_0
+      name: 1
       rect:
         serializedVersion: 2
         x: 4
@@ -802,7 +802,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_1
+      name: 2
       rect:
         serializedVersion: 2
         x: 40
@@ -823,7 +823,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_2
+      name: 3
       rect:
         serializedVersion: 2
         x: 76
@@ -1096,7 +1096,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_15
+      name: 4
       rect:
         serializedVersion: 2
         x: 4
@@ -1117,7 +1117,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_16
+      name: 5
       rect:
         serializedVersion: 2
         x: 40
@@ -1138,7 +1138,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_17
+      name: 6
       rect:
         serializedVersion: 2
         x: 76
@@ -1348,7 +1348,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_27
+      name: 7
       rect:
         serializedVersion: 2
         x: 4
@@ -1369,7 +1369,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_28
+      name: 8
       rect:
         serializedVersion: 2
         x: 40
@@ -1390,7 +1390,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_4x_sliced_29
+      name: 9
       rect:
         serializedVersion: 2
         x: 76
