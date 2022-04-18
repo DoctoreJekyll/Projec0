@@ -39,12 +39,14 @@ public class PlayerPowers : MonoBehaviour
 
     public void HealthPower()
     {
+        Debug.Log(PlayerPrefs.GetFloat("Health"));
         playerData.life += PlayerPrefs.GetFloat("Health");
     }
 
     public void AirAttack()
     {
-        enemyCreate.LoseLife(PlayerPrefs.GetInt("AirAttack"));
+        Debug.Log(PlayerPrefs.GetFloat("AirAttack"));
+        enemyCreate.LoseLife(PlayerPrefs.GetFloat("AirAttack"));
     }
 
 

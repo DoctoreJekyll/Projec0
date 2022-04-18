@@ -7,17 +7,40 @@ public class HubManager : MonoBehaviour
 {
 
     public PlayerData playerData;
-
-    public int goldNecesaryToUpgrade;
     public int actualGold;
-
     private bool canDelete;
 
-    [Header("Hub Stuffs")]
+    [Header("Hub Txt")]
     public TMP_Text lvlTxt;
     public TMP_Text lifeTxt;
     public TMP_Text damageTxt;
     public TMP_Text goldTxt;
+    public TMP_Text goldLevelTxt;
+
+    public TMP_Text healthLevelTxtCost;
+    public TMP_Text airLevelTxtCost;
+
+
+    private void Start()
+    {
+        if (!PlayerPrefs.HasKey("LevelUpCost"))
+        {
+            PlayerPrefs.SetInt("LevelUpCost", 10);
+            PlayerPrefs.Save();
+        }
+
+        if (!PlayerPrefs.HasKey("LevelUpHearthCost"))
+        {
+            PlayerPrefs.SetInt("LevelUpHearthCost", 20);
+            PlayerPrefs.Save();
+        }
+
+        if (!PlayerPrefs.HasKey("LevelUpAirCost"))
+        {
+            PlayerPrefs.SetInt("LevelUpAirCost", 20);
+            PlayerPrefs.Save();
+        }
+    }
 
     private void Update()
     {
@@ -43,14 +66,19 @@ public class HubManager : MonoBehaviour
         lifeTxt.text = "Life: " + PlayerPrefs.GetFloat("Life").ToString();
         damageTxt.text ="Damage: " + PlayerPrefs.GetFloat("Damage").ToString();
         goldTxt.text = PlayerPrefs.GetInt("Gold").ToString() + "g";
+
+        goldLevelTxt.text = PlayerPrefs.GetInt("LevelUpCost").ToString() + "g";
+        healthLevelTxtCost.text = PlayerPrefs.GetInt("LevelUpHearthCost").ToString() + "g";
+        airLevelTxtCost.text = PlayerPrefs.GetInt("LevelUpAirCost").ToString() + "g";
     }
 
     public void IncreasePlayerStats()
     {
-        if (goldNecesaryToUpgrade <= PlayerPrefs.GetInt("Gold"))
+        if (PlayerPrefs.GetInt("LevelUpCost") <= PlayerPrefs.GetInt("Gold"))
         {
-            int newAmountGold = PlayerPrefs.GetInt("Gold") - goldNecesaryToUpgrade;
+            int newAmountGold = PlayerPrefs.GetInt("Gold") - PlayerPrefs.GetInt("LevelUpCost");
             PlayerPrefs.SetInt("Gold", newAmountGold);
+            IncreaseLevelUpCost();
 
             IncreasePlayerLife();
             IncreasePlayerDamage();
@@ -66,7 +94,14 @@ public class HubManager : MonoBehaviour
 
     }
 
-    public void IncreasePlayerLife()
+    private void IncreaseLevelUpCost()
+    {
+        int increasePerLevel = 10;
+        int newLevelUpCost = PlayerPrefs.GetInt("LevelUpCost") + increasePerLevel;
+        PlayerPrefs.SetInt("LevelUpCost", newLevelUpCost);
+    }
+
+    private void IncreasePlayerLife()
     {
         float extraLife = 25f;
         float addLife = PlayerPrefs.GetFloat("Life") + extraLife;
@@ -74,7 +109,7 @@ public class HubManager : MonoBehaviour
         PlayerPrefs.SetFloat("Life", addLife);
     }
 
-    public void IncreasePlayerDamage()
+    private void IncreasePlayerDamage()
     {
         float extraDamage = 10f;
         float addDamage = PlayerPrefs.GetFloat("Damage") + extraDamage;
@@ -82,7 +117,7 @@ public class HubManager : MonoBehaviour
         PlayerPrefs.SetFloat("Damage", addDamage);
     }
 
-    public void IncreaseLevel()
+    private void IncreaseLevel()
     {
         int extraLevel = 1;
         int newLevel = PlayerPrefs.GetInt("Level") + extraLevel;
@@ -90,14 +125,50 @@ public class HubManager : MonoBehaviour
     }
 
     /// <summary>
-    /// ///////////////////////////////POWER UPS MÉTODOS
+    /// ///////////////////////////////POWER UPS MÉTODOS///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     /// </summary>
     /// 
 
     public void IncreaseHealtMagic()
     {
-        if (goldNecesaryToUpgrade <= PlayerPrefs.GetInt("Gold"))
+        if (PlayerPrefs.GetInt("LevelUpHearthCost") <= PlayerPrefs.GetInt("Gold"))
         {
+            int newAmountGold = PlayerPrefs.GetInt("Gold") - PlayerPrefs.GetInt("LevelUpHearthCost");
+            PlayerPrefs.SetInt("Gold", newAmountGold);
+            float damageToAdd = 20f;
+            float newAirDamage = PlayerPrefs.GetFloat("Health") + damageToAdd;
+            PlayerPrefs.SetFloat("Health", newAirDamage);
+
+            IncreaseLevelUpHealthCost();
+            PlayerPrefs.Save();
+
+        }
+        else
+        {
+
+            Debug.Log("U cant purchase this!");
+        }
+    }
+
+    private void IncreaseLevelUpHealthCost()
+    {
+        int increasePerLevel = 20;
+        int newLevelUpCost = PlayerPrefs.GetInt("LevelUpHearthCost") + increasePerLevel;
+        PlayerPrefs.SetInt("LevelUpHearthCost", newLevelUpCost);
+    }
+
+
+    public void IncreaseAirMagic()
+    {
+        if (PlayerPrefs.GetInt("LevelUpAirCost") <= PlayerPrefs.GetInt("Gold"))
+        {
+            int newAmountGold = PlayerPrefs.GetInt("Gold") - PlayerPrefs.GetInt("LevelUpAirCost");
+            PlayerPrefs.SetInt("Gold", newAmountGold);
+            float damageToAdd = 10f;
+            float newAirDamage = PlayerPrefs.GetFloat("AirAttack") + damageToAdd;
+            PlayerPrefs.SetFloat("AirAttack", newAirDamage);
+
+            IncreaseLevelUpAirCost();
 
             PlayerPrefs.Save();
         }
@@ -108,19 +179,22 @@ public class HubManager : MonoBehaviour
         }
     }
 
-
-    public void IncreaseAirMagic()
+    private void IncreaseLevelUpAirCost()
     {
-        if (goldNecesaryToUpgrade <= PlayerPrefs.GetInt("Gold"))
-        {
+        int increasePerLevel = 15;
+        int newLevelUpCost = PlayerPrefs.GetInt("LevelUpAirCost") + increasePerLevel;
+        PlayerPrefs.SetInt("LevelUpAirCost", newLevelUpCost);
+    }
 
-            PlayerPrefs.Save();
-        }
-        else
-        {
 
-            Debug.Log("U cant purchase this!");
-        }
+    /// <summary>
+    /// //////////MENU MÉTODOS//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /// </summary>
+    /// 
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
     
 
@@ -147,6 +221,11 @@ public class HubManager : MonoBehaviour
                 canDelete = false;
             }
         }
+    }
+
+    public void DeleteAllPrefs()
+    {
+        PlayerPrefs.DeleteAll();
     }
 
 }
