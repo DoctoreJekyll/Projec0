@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerPowers : MonoBehaviour
 {
@@ -12,6 +14,13 @@ public class PlayerPowers : MonoBehaviour
     public float healthAmount;
     public float airAttackDamage;
     public float ultimateDamage;
+
+    [Header("Uses")]
+    public int magicCouldown;
+
+    [Header("Canvas Stuffs")]
+    public Image couldDownImg;
+    
 
     private void Awake()
     {
@@ -37,16 +46,27 @@ public class PlayerPowers : MonoBehaviour
     }
 
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            //Baja el couldown
+        }
+    }
+
+
     public void HealthPower()
     {
         Debug.Log(PlayerPrefs.GetFloat("Health"));
         playerData.life += PlayerPrefs.GetFloat("Health");
+        //If USE no puedes usar de nuevo la magia durante x turnos
     }
 
     public void AirAttack()
     {
         Debug.Log(PlayerPrefs.GetFloat("AirAttack"));
         enemyCreate.LoseLife(PlayerPrefs.GetFloat("AirAttack"));
+        
     }
 
 
