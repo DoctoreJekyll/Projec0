@@ -1514,7 +1514,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2913425297225532600, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
   m_PrefabInstance: {fileID: 1480391676039403980}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1006331898
+--- !u!114 &1006331899 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6154800509612909001, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+  m_PrefabInstance: {fileID: 1480391676039403980}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006331897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1006331901
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1529,17 +1540,6 @@ MonoBehaviour:
   magicCouldown: 0
   magicCouldownMax: 8
   couldDownImg: {fileID: 1006331899}
---- !u!114 &1006331899 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6154800509612909001, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
-  m_PrefabInstance: {fileID: 1480391676039403980}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1006331897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1045977248
 GameObject:
   m_ObjectHideFlags: 0
@@ -2678,17 +2678,77 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4411882269849551230, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411882269849551230, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411882269849551230, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1794163045}
+    - target: {fileID: 4411882269849551230, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 545410805}
+    - target: {fileID: 4411882269849551230, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411882269849551230, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ResetCould
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411882269849551230, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MagicCouldown, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411882269849551230, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4411882270684654802, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1794163045}
     - target: {fileID: 4411882271412844496, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411882271412844496, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411882271412844496, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1794163045}
+    - target: {fileID: 4411882271412844496, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1006331901}
+    - target: {fileID: 4411882271412844496, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411882271412844496, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ResetCould
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411882271412844496, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MagicCouldown, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411882271412844496, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411882271412844496, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
 --- !u!114 &1480391676039403981 stripped
