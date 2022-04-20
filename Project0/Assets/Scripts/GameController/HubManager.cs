@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class HubManager : MonoBehaviour
@@ -226,6 +227,8 @@ public class HubManager : MonoBehaviour
     public void DeleteAllPrefs()
     {
         PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("Menu");
+
     }
 
 }
