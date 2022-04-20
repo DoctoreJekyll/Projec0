@@ -131,7 +131,7 @@ public class EnemyCreate : MonoBehaviour
 
         GiveGoldToPlayer();
 
-        if (index <= enemyData.Length - 1)
+        if (index < enemyData.Length - 1)
         {
             LoadNextScriptable();
         }
