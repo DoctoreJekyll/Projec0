@@ -54,7 +54,7 @@ public class PlayerPowers : MonoBehaviour
     {
         Debug.Log(PlayerPrefs.GetFloat("AirAttack"));
         enemyCreate.LoseLife(PlayerPrefs.GetFloat("AirAttack"));
-        ResetMagicWhenUse();
+        //ResetMagicWhenUse();
         
     }
 
@@ -63,7 +63,7 @@ public class PlayerPowers : MonoBehaviour
     {
         float ultimateDamage = enemyCreate.enemyLifeMax / 2;
         enemyCreate.LoseLife(ultimateDamage);
-        ResetMagicWhenUse();
+        //ResetMagicWhenUse();
     }
 
 
