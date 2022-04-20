@@ -97,4 +97,24 @@ public class CheckWhoWin : MonoBehaviour
         allyWin = false;
     }
 
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    ///Comprobar el enfriamiento de las habilidades
+    ///
+
+    public void CouldownController()
+    {
+        MagicCouldown[] magicCouldown = FindObjectsOfType<MagicCouldown>();
+        for (int i = 0; i < magicCouldown.Length; i++)
+        {
+            magicCouldown[i].RestMagicCould();
+        }
+
+    }
+
+
+
+
+
 }

@@ -14,12 +14,6 @@ public class PlayerPowers : MonoBehaviour
     public float healthAmount;
     public float airAttackDamage;
     public float ultimateDamage;
-
-    [Header("Uses")]
-    public int magicCouldown;
-
-    [Header("Canvas Stuffs")]
-    public Image couldDownImg;
     
 
     private void Awake()
@@ -43,15 +37,7 @@ public class PlayerPowers : MonoBehaviour
             PlayerPrefs.SetFloat("AirAttack", 5f);
             PlayerPrefs.Save();
         }
-    }
 
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            //Baja el couldown
-        }
     }
 
 
@@ -62,10 +48,13 @@ public class PlayerPowers : MonoBehaviour
         //If USE no puedes usar de nuevo la magia durante x turnos
     }
 
+
+
     public void AirAttack()
     {
         Debug.Log(PlayerPrefs.GetFloat("AirAttack"));
         enemyCreate.LoseLife(PlayerPrefs.GetFloat("AirAttack"));
+        ResetMagicWhenUse();
         
     }
 
@@ -74,6 +63,17 @@ public class PlayerPowers : MonoBehaviour
     {
         float ultimateDamage = enemyCreate.enemyLifeMax / 2;
         enemyCreate.LoseLife(ultimateDamage);
+        ResetMagicWhenUse();
+    }
+
+
+    private void ResetMagicWhenUse()
+    {
+        MagicCouldown[] magicCouldown = FindObjectsOfType<MagicCouldown>();
+        for (int i = 0; i < magicCouldown.Length; i++)
+        {
+            magicCouldown[i].ResetCould();
+        }
     }
 
 }

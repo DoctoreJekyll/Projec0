@@ -93,6 +93,7 @@ public class MoveToFigthZone : MonoBehaviour
 
         yield return new WaitForSeconds(0.25f);
         checkWhoWin.CheckResults();
+        checkWhoWin.CouldownController();
 
         Tween returnMove = selectionObj.transform.DOMove(tempPos, 0.35f);
         yield return returnMove.WaitForCompletion();
