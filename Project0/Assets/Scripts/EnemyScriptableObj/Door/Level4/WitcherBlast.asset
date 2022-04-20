@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: WitcherBlast
   m_EditorClassIdentifier: 
   enemyName: Super Witcher
-  enemyLevel: 0
-  enemyAttack: 0
-  enemyLife: 0
-  gold: 0
-  enemySprite: {fileID: 0}
+  enemyLevel: 40
+  enemyAttack: 220
+  enemyLife: 700
+  gold: 80
+  enemySprite: {fileID: 6597481699637694506, guid: 2eb9ca31840725d43894940bbb896c9c, type: 3}

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2a420f9001fac04fa32db796eb102e1, type: 3}
   m_Name: Agressive Guard
   m_EditorClassIdentifier: 
-  enemyName: 
-  enemyLevel: 0
-  enemyAttack: 0
-  enemyLife: 0
-  gold: 0
-  enemySprite: {fileID: 0}
+  enemyName: Power Guard
+  enemyLevel: 58
+  enemyAttack: 450
+  enemyLife: 1450
+  gold: 80
+  enemySprite: {fileID: 710405504474814621, guid: aab89d59683ce614b9a42fb0288038de, type: 3}
