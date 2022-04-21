@@ -145,8 +145,12 @@ public class EnemyCreate : MonoBehaviour
 
     private void LoadHud()
     {
+        UnlockerByLevel unlockerByLevel = FindObjectOfType<UnlockerByLevel>();
+
+
         if (index == enemyData.Length)
         {
+            unlockerByLevel.CheckSceneNameAndSetUnlockPref();
             SceneManager.LoadScene("Hub");
         }
     }

@@ -88,7 +88,6 @@ public class PlayerData : MonoBehaviour
     {      
         PlayerDie();
         GoldBag();
-        Debug.Log(gold);
 
         if (life > maxLife)
         {

@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
 
     [Header("Player Canvas")]
     public TMP_Text goldAmountTxt;
+    public TMP_Text damageAmountTxt;
+    public TMP_Text lifeAmountTxt;
     public Image barImg;
 
     [Header("Enemy Canvas")]
@@ -52,11 +54,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            DeletePlayerPrefs();
-        }
-
         ShowHowMonyUHave();
         HealthPlayerBar();
 
@@ -66,15 +63,11 @@ public class GameManager : MonoBehaviour
         ShowEnemyName();
     }
 
-    public void DeletePlayerPrefs()
-    {
-        Debug.Log("Los datos fueron borrados!");
-        PlayerPrefs.DeleteAll();
-    }
-
     public void ShowHowMonyUHave()
     {
-        goldAmountTxt.text =PlayerPrefs.GetInt("Gold").ToString() + "g";
+        goldAmountTxt.text = PlayerPrefs.GetInt("Gold").ToString() + "g";
+        damageAmountTxt.text = PlayerPrefs.GetFloat("Damage").ToString();
+        lifeAmountTxt.text = PlayerPrefs.GetFloat("Life").ToString();
     }
 
     public void HealthPlayerBar()
