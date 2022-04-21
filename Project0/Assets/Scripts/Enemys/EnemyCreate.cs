@@ -69,16 +69,6 @@ public class EnemyCreate : MonoBehaviour
             LoadNextScriptable();
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            StartCoroutine(FadeToCero(0f, 0.3f));
-            
-        }else if (Input.GetKeyDown(KeyCode.D))
-        {
-            StartCoroutine(FadeToCero(1f, 0.3f));
-        }
-
-
     }
 
     public void Die()
@@ -161,6 +151,9 @@ public class EnemyCreate : MonoBehaviour
         }
     }
 
+
+    //Todo... LA IDEA ES QUE CUANDO TERMINES UNA ESCENA, EL LOCKED DE LA SIGUIENTE SE DESBLOQUEE Y SE QUEDE DESBLOQUEADO
+    //CADA ESCENA DESBLOQUEA 1 Y SOLO 1, ESTO ES UN PROBLEMA, BUENA SUERTE JOSE DEL FUTURO.
 
     /////////////////////////////////////////////////////////////////////GOLD STUFF/////////////////////////////////////////////////////////////////
 

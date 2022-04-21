@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
 
     public void ShowHowMonyUHave()
     {
-        goldAmountTxt.text = "Gold: " + PlayerPrefs.GetInt("Gold").ToString() + "g";
+        goldAmountTxt.text =PlayerPrefs.GetInt("Gold").ToString() + "g";
     }
 
     public void HealthPlayerBar()
