@@ -60,6 +60,8 @@ public class EnemyCreate : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(enemyData.Length);
+        Debug.Log(index);
 
         Die();
         LoadHud();
@@ -121,7 +123,7 @@ public class EnemyCreate : MonoBehaviour
 
         GiveGoldToPlayer();
 
-        if (index < enemyData.Length - 1)
+        if (index < enemyData.Length)
         {
             LoadNextScriptable();
         }

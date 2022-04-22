@@ -2660,9 +2660,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData:
+  - {fileID: 11400000, guid: fe6a9977f77643a488ada5bd6c7af022, type: 2}
   - {fileID: 11400000, guid: c9d29d0a821ebbe40a7ee2660381e7e8, type: 2}
+  - {fileID: 11400000, guid: a3533377ae379314a9730de80880c4da, type: 2}
   - {fileID: 11400000, guid: 1d338a806d2e5ca489b3c3407e7cd215, type: 2}
   - {fileID: 11400000, guid: 6788ef3e334ff2a4a88d2e67adde41c9, type: 2}
+  - {fileID: 11400000, guid: 010d02a16ec074348a54b40ff7957683, type: 2}
   - {fileID: 11400000, guid: 27c9b3deb88e9f04cb6c47348b95e458, type: 2}
   - {fileID: 11400000, guid: 49049d1e7f1f466438e75a7bb3c4ede6, type: 2}
   enemyName: 

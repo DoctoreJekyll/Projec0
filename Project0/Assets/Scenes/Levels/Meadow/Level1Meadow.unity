@@ -2382,7 +2382,10 @@ MonoBehaviour:
   enemyData:
   - {fileID: 11400000, guid: 8498cefbc4cfef9498d9334706810c3c, type: 2}
   - {fileID: 11400000, guid: 86f2a05121eb22c4ab0cc7812a676ea1, type: 2}
+  - {fileID: 11400000, guid: 53b2c4efc3344e247a8f69788d5e471f, type: 2}
+  - {fileID: 11400000, guid: 518e855ad05dabc45803fb70d2c0cab6, type: 2}
   - {fileID: 11400000, guid: 84bf3f50df7ff43459e59c0514604c3f, type: 2}
+  - {fileID: 11400000, guid: ebac0ef2cec4e00478e254a3847e684e, type: 2}
   - {fileID: 11400000, guid: 122f928aab2205d49b4b3ec71514cb29, type: 2}
   - {fileID: 11400000, guid: 561905bb74328eb41b0bd87ffadc2a20, type: 2}
   enemyName: 

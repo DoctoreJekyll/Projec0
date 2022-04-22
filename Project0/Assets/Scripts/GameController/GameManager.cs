@@ -67,7 +67,8 @@ public class GameManager : MonoBehaviour
     {
         goldAmountTxt.text = PlayerPrefs.GetInt("Gold").ToString() + "g";
         damageAmountTxt.text = PlayerPrefs.GetFloat("Damage").ToString();
-        lifeAmountTxt.text = PlayerPrefs.GetFloat("Life").ToString();
+        //lifeAmountTxt.text = PlayerPrefs.GetFloat("Life").ToString();
+        lifeAmountTxt.text = FindObjectOfType<PlayerData>().life.ToString();
     }
 
     public void HealthPlayerBar()

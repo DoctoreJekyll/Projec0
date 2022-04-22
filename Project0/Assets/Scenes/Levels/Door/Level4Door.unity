@@ -2750,10 +2750,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData:
+  - {fileID: 11400000, guid: 9cbb21d6a50599f41a812118cb4c6f7e, type: 2}
   - {fileID: 11400000, guid: 6c363cd57ab62f84dacf2774dac5ea2e, type: 2}
   - {fileID: 11400000, guid: d96fc6da9bb78ad4ca174f8b160ad4d4, type: 2}
   - {fileID: 11400000, guid: eb750e9100e29b54b88c4171103b015e, type: 2}
   - {fileID: 11400000, guid: 73947c48921d17045852326887b650bb, type: 2}
+  - {fileID: 11400000, guid: 7c373022ee702744fa5fccbeaef46513, type: 2}
+  - {fileID: 11400000, guid: 297f59b5278abe040946db8699364618, type: 2}
   - {fileID: 11400000, guid: 04b0d1603774cd046b74b47e0a410cef, type: 2}
   enemyName: 
   enemyLife: 0

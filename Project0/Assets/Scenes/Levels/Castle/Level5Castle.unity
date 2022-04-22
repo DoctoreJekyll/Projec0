@@ -2831,11 +2831,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData:
+  - {fileID: 11400000, guid: cab253862cd06f242a0ff9e49c7e665c, type: 2}
   - {fileID: 11400000, guid: d8ff88491d40fa944a8f5440562df9c5, type: 2}
   - {fileID: 11400000, guid: 384c5a6c8602c9849b61ef927cec0f1e, type: 2}
   - {fileID: 11400000, guid: d903454a84243c6459c8eb02af698ccf, type: 2}
   - {fileID: 11400000, guid: aa601e7de64d5034096bd2574ffc2a04, type: 2}
   - {fileID: 11400000, guid: 717f6665f20937c45a73728decb093a0, type: 2}
+  - {fileID: 11400000, guid: 7c894a67f5b157d48b4773139da39f4a, type: 2}
   - {fileID: 11400000, guid: 67250cd55e25e3b4188eb14e409a1b86, type: 2}
   enemyName: 
   enemyLife: 0

@@ -2693,7 +2693,9 @@ MonoBehaviour:
   enemyData:
   - {fileID: 11400000, guid: 639d0560169874347bcc1059c103ad95, type: 2}
   - {fileID: 11400000, guid: d1f0b0cd03dfecb4ca75d806f78b37ad, type: 2}
+  - {fileID: 11400000, guid: da8a1689c1a6a45439f7125634006559, type: 2}
   - {fileID: 11400000, guid: 9ab89f9e2bd9ff64dac633dc0e2764eb, type: 2}
+  - {fileID: 11400000, guid: 463ca4e2d7b9c1142b3f6e7d37d88bc4, type: 2}
   - {fileID: 11400000, guid: 7220a7c4120316e4596b7fa099797d64, type: 2}
   - {fileID: 11400000, guid: 3f8d4119f30c6e64297c1d704c1d27f1, type: 2}
   enemyName: 

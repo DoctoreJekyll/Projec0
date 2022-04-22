@@ -219,6 +219,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 377229112}
+        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+        m_MethodName: StartBuyDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &66446587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1231,6 +1243,7 @@ GameObject:
   - component: {fileID: 377229106}
   - component: {fileID: 377229110}
   - component: {fileID: 377229111}
+  - component: {fileID: 377229112}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1348,6 +1361,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813f111b9de96774bacf52b53e0dabb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &377229112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377229105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7244e00e8defe6345a1605d80022589b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 1175530711}
+  dialogueT: {fileID: 568740566}
+  dialogueText:
+  - '"I used to be an adventurer like you. But then I took an arrow into the knee.."'
+  - Againt
+  - Silksont
+  - Buy something!
+  - a
+  buyString:
+  - You cant buy this! Thief! THIEF!!
+  - THANKS! for your buy jeje...
 --- !u!1 &469034280
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,8 +2064,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I used to be an adventurer like you. But then I took an arrow into the
-    knee..
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 08a6c38b90548a8498dd4d12b108d639, type: 2}
   m_sharedMaterial: {fileID: 5236031932863563316, guid: 08a6c38b90548a8498dd4d12b108d639, type: 2}
@@ -2700,6 +2735,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1577536822}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 377229112}
+        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+        m_MethodName: StartDialogueCorroutine
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4392,7 +4439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1175530712
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5341,6 +5388,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 377229112}
+        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+        m_MethodName: StartDialogueCorroutine
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1464558982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6005,7 +6064,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1577536823
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6981,6 +7040,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 235443929}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 377229112}
+        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+        m_MethodName: StartDialogueCorroutine
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

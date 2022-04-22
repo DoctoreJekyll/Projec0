@@ -78,6 +78,8 @@ public class HubManager : MonoBehaviour
         if (PlayerPrefs.GetInt("LevelUpCost") <= PlayerPrefs.GetInt("Gold"))
         {
             int newAmountGold = PlayerPrefs.GetInt("Gold") - PlayerPrefs.GetInt("LevelUpCost");
+            Dialogue dialogue = FindObjectOfType<Dialogue>();
+            dialogue.StartBuyDialogue();////CAMBIAR LOS MÉTODOS PARA QUE SEGÚN PUEDAS COMPRAR O NO LLAMES A UN MÉTODO U OTRO QUE MUESTRE UNO U OTRO TEXTO
             PlayerPrefs.SetInt("Gold", newAmountGold);
             IncreaseLevelUpCost();
 

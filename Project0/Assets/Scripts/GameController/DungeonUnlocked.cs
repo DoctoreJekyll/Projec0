@@ -64,31 +64,21 @@ public class DungeonUnlocked : MonoBehaviour
 
         if (PlayerPrefs.GetInt("UnlockedLevel2") == 1)
         {
-            lockedPanel[0].SetActive(false);
             lockedPanel[1].SetActive(false);
         }
 
         if (PlayerPrefs.GetInt("UnlockedLevel3") == 1)
         {
-            lockedPanel[0].SetActive(false);
-            lockedPanel[1].SetActive(false);
             lockedPanel[2].SetActive(false);
         }
 
         if (PlayerPrefs.GetInt("UnlockedLevel4") == 1)
         {
-            lockedPanel[0].SetActive(false);
-            lockedPanel[1].SetActive(false);
-            lockedPanel[2].SetActive(false);
             lockedPanel[3].SetActive(false);
         }
 
         if (PlayerPrefs.GetInt("UnlockedLevel5") == 1)
         {
-            lockedPanel[0].SetActive(false);
-            lockedPanel[1].SetActive(false);
-            lockedPanel[2].SetActive(false);
-            lockedPanel[3].SetActive(false);
             lockedPanel[4].SetActive(false);
         }
 
