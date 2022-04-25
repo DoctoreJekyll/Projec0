@@ -13,13 +13,19 @@ public class CheckWhoWin : MonoBehaviour
     public PlayerData playerData;
     public EnemyCreate enemy;
 
+    [Header("Attacks")]
+    public InstantiateBolt instantiateTemp;
+    public GameObject enemyAttack;
+    public GameObject enemyTieAttack;
+
     private void Awake()
     {
         playerData = FindObjectOfType<PlayerData>();
         enemy = FindObjectOfType<EnemyCreate>();
     }
 
-    public InstantiateBolt instantiateTemp;
+
+    
 
     public void CheckResults()
     {
@@ -35,11 +41,14 @@ public class CheckWhoWin : MonoBehaviour
                 else if(enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.PaperEnemy)
                 {
                     instantiateTemp.InstantiateMiniBolt();
+                    Instantiate(enemyTieAttack, playerData.gameObject.transform.position, Quaternion.identity);
                     Debug.Log("tie");
                 }
                 else if(enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.ScissorEnemy)
                 {
-                    playerData.LoseLife(enemy.enemyAttack);
+                    //Instanciar ataque enemigo normal
+                    Instantiate(enemyAttack, playerData.gameObject.transform.position, Quaternion.identity);
+                    //playerData.LoseLife(enemy.enemyAttack);
                 }
                 break;
 
@@ -53,11 +62,14 @@ public class CheckWhoWin : MonoBehaviour
                 else if(enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.ScissorEnemy)
                 {
                     instantiateTemp.InstantiateMiniBolt();
+                    Instantiate(enemyTieAttack, playerData.gameObject.transform.position, Quaternion.identity);
                     Debug.Log("tie");
                 }
                 else if (enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.RockEnemy)
                 {
-                    playerData.LoseLife(enemy.enemyAttack);
+                    //Instanciar ataque enemigo normal
+                    Instantiate(enemyAttack, playerData.gameObject.transform.position, Quaternion.identity);
+                    //playerData.LoseLife(enemy.enemyAttack);
                 }
                 break;
 
@@ -71,11 +83,14 @@ public class CheckWhoWin : MonoBehaviour
                 else if(enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.RockEnemy)
                 {
                     instantiateTemp.InstantiateMiniBolt();
+                    Instantiate(enemyTieAttack, playerData.gameObject.transform.position, Quaternion.identity);
                     Debug.Log("tie");
                 }
                 else if (enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.PaperEnemy)
                 {
-                    playerData.LoseLife(enemy.enemyAttack);
+                    //Instanciar ataque enemigo normal
+                    Instantiate(enemyAttack, playerData.gameObject.transform.position, Quaternion.identity);
+                    //playerData.LoseLife(enemy.enemyAttack);
                 }
                 break;
 
@@ -112,9 +127,5 @@ public class CheckWhoWin : MonoBehaviour
         }
 
     }
-
-
-
-
 
 }

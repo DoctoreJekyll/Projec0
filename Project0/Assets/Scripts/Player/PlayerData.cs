@@ -73,6 +73,7 @@ public class PlayerData : MonoBehaviour
     public void LoseLife(float amount)
     {
         life -= amount;
+        CameraShake.Shake(0.05f, 0.05f);
         StartCoroutine(LoseLifeAnimTemp());
     }
 
