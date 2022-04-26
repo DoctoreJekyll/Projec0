@@ -7,12 +7,8 @@ public class Dialogue : MonoBehaviour
 {
     public GameObject dialoguePanel;
     public TMP_Text dialogueT;
-
-    private int dialogueIndex;
     [TextArea(3, 6)] public string[] dialogueText;
     public string[] buyString;
-
-    private bool didDialogueStart;
 
     private void Start()
     {
@@ -22,30 +18,9 @@ public class Dialogue : MonoBehaviour
 
     private void StartDialogue()
     {
-        didDialogueStart = true;
         dialoguePanel.SetActive(true);
 
         StartCoroutine(ShowText());
-    }
-
-    //private void NextDialogueLine()
-    //{
-    //    dialogueIndex++;
-    //    if (dialogueIndex < dialogueText.Length)
-    //    {
-    //        StartCoroutine(ShowText());
-    //    }
-    //    else
-    //    {
-    //        CloseText();
-    //    }
-
-    //}
-
-    private void CloseText()
-    {
-        didDialogueStart = false;
-        dialoguePanel.SetActive(false);
     }
 
     public void StartDialogueCorroutine()

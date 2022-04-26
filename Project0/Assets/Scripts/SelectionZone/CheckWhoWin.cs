@@ -16,7 +16,8 @@ public class CheckWhoWin : MonoBehaviour
     [Header("Attacks")]
     public InstantiateBolt instantiateTemp;
     public GameObject enemyAttack;
-    public GameObject enemyTieAttack;
+    public GameObject tieAttack;
+    public Transform tieAttackTransform;
 
     private void Awake()
     {
@@ -40,8 +41,10 @@ public class CheckWhoWin : MonoBehaviour
                 }
                 else if(enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.PaperEnemy)
                 {
-                    instantiateTemp.InstantiateMiniBolt();
-                    Instantiate(enemyTieAttack, playerData.gameObject.transform.position, Quaternion.identity);
+                    //instantiateTemp.InstantiateMiniBolt();
+                    //Instantiate(enemyTieAttack, playerData.gameObject.transform.position, Quaternion.identity);
+                    //Instantiate just one obj
+                    Instantiate(tieAttack, tieAttackTransform.position, Quaternion.identity);
                     Debug.Log("tie");
                 }
                 else if(enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.ScissorEnemy)
@@ -61,8 +64,7 @@ public class CheckWhoWin : MonoBehaviour
                 }
                 else if(enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.ScissorEnemy)
                 {
-                    instantiateTemp.InstantiateMiniBolt();
-                    Instantiate(enemyTieAttack, playerData.gameObject.transform.position, Quaternion.identity);
+                    Instantiate(tieAttack, tieAttackTransform.position, Quaternion.identity);
                     Debug.Log("tie");
                 }
                 else if (enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.RockEnemy)
@@ -82,8 +84,7 @@ public class CheckWhoWin : MonoBehaviour
                 }
                 else if(enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.RockEnemy)
                 {
-                    instantiateTemp.InstantiateMiniBolt();
-                    Instantiate(enemyTieAttack, playerData.gameObject.transform.position, Quaternion.identity);
+                    Instantiate(tieAttack, tieAttackTransform.position, Quaternion.identity);
                     Debug.Log("tie");
                 }
                 else if (enemyInstance.selectionsEnemy == EnemySelectChoice.SelectionsEnemy.PaperEnemy)
