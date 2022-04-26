@@ -14,6 +14,11 @@ public class PlayerPowers : MonoBehaviour
     public float healthAmount;
     public float airAttackDamage;
     public float ultimateDamage;
+
+    [Header("Magic Instantiate")]
+    public GameObject healthMagic;
+    public GameObject airMagic;
+    public GameObject ultimateMagic;
     
 
     private void Awake()
@@ -45,7 +50,9 @@ public class PlayerPowers : MonoBehaviour
     {
         Debug.Log(PlayerPrefs.GetFloat("Health"));
         playerData.life += PlayerPrefs.GetFloat("Health");
-        //If USE no puedes usar de nuevo la magia durante x turnos
+
+        Vector3 t = new Vector3(0f, -0.22f, 0f);//Posicion debajo del jugador
+        Instantiate(healthMagic, t, Quaternion.identity);
     }
 
 
