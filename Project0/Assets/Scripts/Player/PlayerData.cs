@@ -16,6 +16,7 @@ public class PlayerData : MonoBehaviour
     [Header("Other Player Stuffs")]
     public bool playerIsLife;
     [SerializeField] GameObject playerShadow;
+    [SerializeField] GameObject fadeIn;
 
     [Header("Init Values")]
     public float initLife;
@@ -94,6 +95,11 @@ public class PlayerData : MonoBehaviour
         {
             life = maxLife;
         }
+
+        if (life < 0)
+        {
+            life = 0;
+        }
     }
 
 
@@ -102,9 +108,10 @@ public class PlayerData : MonoBehaviour
         if (life <= 0)
         {
             playerIsLife = false;
-            spriteRenderer.enabled = false;
-            playerShadow.SetActive(false);
-            SceneManager.LoadScene("Hub");
+            Animator playerAnimator;
+            playerAnimator = GetComponent<Animator>();
+            playerAnimator.SetBool("playerDead", true);
+            fadeIn.SetActive(true);
         }
     }
 

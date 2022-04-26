@@ -104,6 +104,7 @@ MonoBehaviour:
   playerLevel: 1
   playerIsLife: 0
   playerShadow: {fileID: 2442265008769267265}
+  fadeIn: {fileID: 0}
   initLife: 0
   actualLife: 0
   initAttackDamage: 10
