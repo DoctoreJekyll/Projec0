@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AirAttackMagic : MonoBehaviour
+public class UltimateMagic : MonoBehaviour
 {
 
-    public void AirAttackDamage()
+    public void UltimateDamage()
     {
         PlayerPowers playerPowers = FindObjectOfType<PlayerPowers>();
-        playerPowers.AirAttack();
-        CameraShake.Shake(0.1f, 0.18f);
+        playerPowers.UltimatePower();
+        CameraShake.Shake(0.2f, 0.2f);
         Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+
     }
+
+
 
 }

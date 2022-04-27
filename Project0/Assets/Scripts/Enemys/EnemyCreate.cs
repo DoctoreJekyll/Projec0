@@ -144,6 +144,7 @@ public class EnemyCreate : MonoBehaviour
 
     }
 
+    [SerializeField] private GameObject fadeInWin;
 
     private void LoadHud()
     {
@@ -153,7 +154,8 @@ public class EnemyCreate : MonoBehaviour
         if (index == enemyData.Length)
         {
             unlockerByLevel.CheckSceneNameAndSetUnlockPref();
-            SceneManager.LoadScene("Hub");
+            fadeInWin.SetActive(true);
+            //SceneManager.LoadScene("Hub");
         }
     }
 

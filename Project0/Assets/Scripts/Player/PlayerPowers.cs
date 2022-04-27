@@ -19,6 +19,7 @@ public class PlayerPowers : MonoBehaviour
     public GameObject healthMagic;
     public GameObject airMagic;
     public GameObject ultimateMagic;
+    public Transform ultimatePosition;
     
 
     private void Awake()
@@ -75,6 +76,11 @@ public class PlayerPowers : MonoBehaviour
         float ultimateDamage = enemyCreate.enemyLifeMax / 2;
         enemyCreate.LoseLife(ultimateDamage);
         //ResetMagicWhenUse();
+    }
+
+    public void InstantiateUltimateAttack()
+    {
+        Instantiate(ultimateMagic, ultimatePosition.position, Quaternion.identity);
     }
 
 
