@@ -21,6 +21,12 @@ public class HubManager : MonoBehaviour
     public TMP_Text healthLevelTxtCost;
     public TMP_Text airLevelTxtCost;
 
+    [SerializeField] Dialogue dialogue;
+
+    private void Awake()
+    {
+        dialogue = FindObjectOfType<Dialogue>();
+    }
 
     private void Start()
     {
@@ -48,7 +54,6 @@ public class HubManager : MonoBehaviour
         actualGold = PlayerPrefs.GetInt("Gold");
         Debug.Log("Life: " + PlayerPrefs.GetFloat("Life") + "Damage: " + PlayerPrefs.GetFloat("Damage") + "Gold: " + PlayerPrefs.GetInt("Gold"));
 
-
         ShowStatsOnHub();
 
 
@@ -75,26 +80,36 @@ public class HubManager : MonoBehaviour
 
     public void IncreasePlayerStats()
     {
+
         if (PlayerPrefs.GetInt("LevelUpCost") <= PlayerPrefs.GetInt("Gold"))
         {
-            int newAmountGold = PlayerPrefs.GetInt("Gold") - PlayerPrefs.GetInt("LevelUpCost");
-            Dialogue dialogue = FindObjectOfType<Dialogue>();
-            dialogue.StartBuyDialogue();////CAMBIAR LOS MÉTODOS PARA QUE SEGÚN PUEDAS COMPRAR O NO LLAMES A UN MÉTODO U OTRO QUE MUESTRE UNO U OTRO TEXTO
-            PlayerPrefs.SetInt("Gold", newAmountGold);
-            IncreaseLevelUpCost();
-
-            IncreasePlayerLife();
-            IncreasePlayerDamage();
-            IncreaseLevel();
-
-            PlayerPrefs.Save();
+            IncreasePlayerStatMethod();
+            //////////Llamo aqui a los métodos del diálogo porque no se que está pasando
+            ///
+            dialogue.StartBuyDialogue();
 
         }
         else
         {
+            dialogue.StartCantBuyDialogue();
             Debug.Log("U cant purchase this!");
         }
 
+    }
+
+    public void IncreasePlayerStatMethod()
+    {
+        int newAmountGold = PlayerPrefs.GetInt("Gold") - PlayerPrefs.GetInt("LevelUpCost");
+        Dialogue dialogue = FindObjectOfType<Dialogue>();
+        dialogue.StartBuyDialogue();////CAMBIAR LOS MÉTODOS PARA QUE SEGÚN PUEDAS COMPRAR O NO LLAMES A UN MÉTODO U OTRO QUE MUESTRE UNO U OTRO TEXTO
+        PlayerPrefs.SetInt("Gold", newAmountGold);
+        IncreaseLevelUpCost();
+
+        IncreasePlayerLife();
+        IncreasePlayerDamage();
+        IncreaseLevel();
+
+        PlayerPrefs.Save();
     }
 
     private void IncreaseLevelUpCost()
@@ -145,10 +160,12 @@ public class HubManager : MonoBehaviour
             IncreaseLevelUpHealthCost();
             PlayerPrefs.Save();
 
+            dialogue.StartBuyDialogue();
+
         }
         else
         {
-
+            dialogue.StartCantBuyDialogue();
             Debug.Log("U cant purchase this!");
         }
     }
@@ -174,10 +191,12 @@ public class HubManager : MonoBehaviour
             IncreaseLevelUpAirCost();
 
             PlayerPrefs.Save();
+
+            dialogue.StartBuyDialogue();
         }
         else
         {
-
+            dialogue.StartCantBuyDialogue();
             Debug.Log("U cant purchase this!");
         }
     }

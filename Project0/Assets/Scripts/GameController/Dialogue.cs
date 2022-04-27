@@ -19,7 +19,6 @@ public class Dialogue : MonoBehaviour
     private void StartDialogue()
     {
         dialoguePanel.SetActive(true);
-
         StartCoroutine(ShowText());
     }
 
@@ -33,8 +32,16 @@ public class Dialogue : MonoBehaviour
     public void StartBuyDialogue()
     {
         StopAllCoroutines();
-        StartCoroutine(ShowBuyText());
+        StartCoroutine(ShowCanBuyText());
+
     }
+
+    public void StartCantBuyDialogue()
+    {
+        StopAllCoroutines();
+        StartCoroutine(ShowDontBuyText());
+    }
+
 
     private IEnumerator ShowText()
     {
@@ -48,28 +55,27 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    private IEnumerator ShowBuyText()
+    private IEnumerator ShowDontBuyText()
     {
         dialogueT.text = "";
 
-        if (PlayerPrefs.GetInt("LevelUpCost") > PlayerPrefs.GetInt("Gold"))
+        foreach (char ch in buyString[0])
         {
-            foreach (char ch in buyString[0])
-            {
-                dialogueT.text += ch;
-                yield return new WaitForSeconds(0.03f);
-            }
+            dialogueT.text += ch;
+            yield return new WaitForSeconds(0.03f);
         }
 
-        if (PlayerPrefs.GetInt("LevelUpCost") < PlayerPrefs.GetInt("Gold"))
-        {
-            foreach (char ch in buyString[1])
-            {
-                dialogueT.text += ch;
-                yield return new WaitForSeconds(0.03f);
-            }
-        }
+    }
 
+    private IEnumerator ShowCanBuyText()
+    {
+        dialogueT.text = "";
+
+        foreach (char ch in buyString[1])
+        {
+            dialogueT.text += ch;
+            yield return new WaitForSeconds(0.03f);
+        }
 
     }
 

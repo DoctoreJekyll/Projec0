@@ -26,7 +26,7 @@ public class TieAttackScript : MonoBehaviour
 
         enemyCreate.LoseLife(damageEnemyRecibed);
 
-        if (damagePlayerRecibed > playerData.life)
+        if (damagePlayerRecibed >= playerData.life)
         {
             playerData.life = 1f;
         }
