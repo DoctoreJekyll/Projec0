@@ -56,6 +56,10 @@ public class PlayerPowers : MonoBehaviour
     }
 
 
+    public void InstantiateAirAttack()
+    {
+        Instantiate(airMagic, enemyCreate.transform.position, Quaternion.identity);
+    }
 
     public void AirAttack()
     {

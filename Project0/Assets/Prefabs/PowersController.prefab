@@ -48,3 +48,6 @@ MonoBehaviour:
   healthAmount: 0
   airAttackDamage: 0
   ultimateDamage: 0
+  healthMagic: {fileID: 5947523560509823514, guid: 3b52975093a9d7b4c8bd6df0c7783d44, type: 3}
+  airMagic: {fileID: 1680939684359298359, guid: 94ddc33a5ea84104eb24d9dacf099d64, type: 3}
+  ultimateMagic: {fileID: 0}
