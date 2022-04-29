@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class FadeChargeLevel : MonoBehaviour
+public class StartSceneInn : MonoBehaviour
 {
 
-    public void LoadHub(string sceneName)
+    public void LoadStartScene()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("Hub");
     }
 
 

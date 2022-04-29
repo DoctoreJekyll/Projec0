@@ -11,6 +11,14 @@ public class LevelSelection : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public Animator animator;
 
+    public void JoseDelFuturoPerdonPorEsto()
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger("FadeInn");
+        }
+    }
 
 }

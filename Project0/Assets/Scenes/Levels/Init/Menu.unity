@@ -427,6 +427,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304455551}
   m_CullTransparentMesh: 1
+--- !u!1 &484274093 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6521630181183851099, guid: 4ac7a25743f62a34990993fc876f4b48, type: 3}
+  m_PrefabInstance: {fileID: 6521630181303665518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &484274094 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6521630181183851095, guid: 4ac7a25743f62a34990993fc876f4b48, type: 3}
+  m_PrefabInstance: {fileID: 6521630181303665518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &484274097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484274093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6712ed107278a4544bb0f786d595c15c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &502477159
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,14 +827,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1593149710}
         m_TargetAssemblyTypeName: LevelSelection, Assembly-CSharp
-        m_MethodName: LoadSceneByName
-        m_Mode: 5
+        m_MethodName: JoseDelFuturoPerdonPorEsto
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Hub
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &996425317
@@ -1169,6 +1191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e4d599df216fe498b30efc1ef39b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 484274094}
 --- !u!1 &2002566184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,6 +1484,10 @@ PrefabInstance:
     - target: {fileID: 6521630181183851096, guid: 4ac7a25743f62a34990993fc876f4b48, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6521630181183851097, guid: 4ac7a25743f62a34990993fc876f4b48, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6521630181183851099, guid: 4ac7a25743f62a34990993fc876f4b48, type: 3}
       propertyPath: m_Name
