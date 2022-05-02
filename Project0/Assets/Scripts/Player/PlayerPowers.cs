@@ -47,11 +47,8 @@ public class PlayerPowers : MonoBehaviour
 
     }
 
-
     public void HealthPower()
     {
-        playerData.life += PlayerPrefs.GetFloat("Health");
-
         Vector3 t = new Vector3(0f, -0.22f, 0f);//Posicion debajo del jugador
         Instantiate(healthMagic, t, Quaternion.identity);
     }

@@ -10,6 +10,7 @@ public class TieAttackScript : MonoBehaviour
     [SerializeField] EnemyCreate enemyCreate;
 
     [SerializeField] GameObject playerTextDamaged;
+    [SerializeField] GameObject enemyTextDamaged;
 
     private void Awake()
     {
@@ -28,7 +29,9 @@ public class TieAttackScript : MonoBehaviour
         float damagePlayerRecibed = (enemyCreate.enemyAttack / 2) / 2;
 
 
-
+        GameObject tempObj = Instantiate(enemyTextDamaged);
+        TMP_Text textTemp2 = tempObj.GetComponent<TMP_Text>();
+        textTemp2.text = damageEnemyRecibed.ToString();
         enemyCreate.LoseLife(damageEnemyRecibed);
 
         if (damagePlayerRecibed >= playerData.life)
