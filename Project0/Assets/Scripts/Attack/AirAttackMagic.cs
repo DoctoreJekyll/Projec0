@@ -9,7 +9,7 @@ public class AirAttackMagic : MonoBehaviour
     {
         PlayerPowers playerPowers = FindObjectOfType<PlayerPowers>();
         playerPowers.AirAttack();
-        CameraShake.Shake(0.1f, 0.18f);
+        CameraShake.Shake(0.11f, 0.19f);
         Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
     }
 

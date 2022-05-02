@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 0}
   enemyCreate: {fileID: 0}
+  enemyDamagedTxt: {fileID: 3026917196941730126, guid: ad846166f974fe34f813eff844dbb9c1, type: 3}
   healthAmount: 0
   airAttackDamage: 0
   ultimateDamage: 0

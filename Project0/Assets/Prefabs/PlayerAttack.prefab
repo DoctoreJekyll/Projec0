@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4971791794375722816}
   - component: {fileID: 4971791794375722819}
   - component: {fileID: 4971791794375722818}
-  - component: {fileID: 4971791794375722821}
+  - component: {fileID: 1631259697529681258}
   m_Layer: 0
   m_Name: PlayerAttack
   m_TagString: Untagged
@@ -103,7 +103,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4971791794375722821
+--- !u!114 &1631259697529681258
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,6 +112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4971791794375722820}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ea08534a7041a54a922d8bff4ea0e86, type: 3}
+  m_Script: {fileID: 11500000, guid: 3809438a718b3e14c95e1104e3f7b0f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyDamagedTxt: {fileID: 3026917196941730126, guid: ad846166f974fe34f813eff844dbb9c1, type: 3}

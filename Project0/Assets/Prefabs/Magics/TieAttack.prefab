@@ -117,3 +117,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerData: {fileID: 0}
   enemyCreate: {fileID: 0}
+  playerTextDamaged: {fileID: 3153002029529319502, guid: 7b28189a493a8a74e86c455aa55a3fbe, type: 3}

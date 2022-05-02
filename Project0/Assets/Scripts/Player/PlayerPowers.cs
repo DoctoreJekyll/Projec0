@@ -9,6 +9,7 @@ public class PlayerPowers : MonoBehaviour
 
     [SerializeField] private PlayerData playerData;
     [SerializeField] private EnemyCreate enemyCreate;
+    [SerializeField] GameObject enemyDamagedTxt;
 
     [Header("Power Variables")]
     public float healthAmount;
@@ -49,7 +50,6 @@ public class PlayerPowers : MonoBehaviour
 
     public void HealthPower()
     {
-        Debug.Log(PlayerPrefs.GetFloat("Health"));
         playerData.life += PlayerPrefs.GetFloat("Health");
 
         Vector3 t = new Vector3(0f, -0.22f, 0f);//Posicion debajo del jugador
@@ -64,8 +64,11 @@ public class PlayerPowers : MonoBehaviour
 
     public void AirAttack()
     {
-        Debug.Log(PlayerPrefs.GetFloat("AirAttack"));
+        GameObject textObj = Instantiate(enemyDamagedTxt);
+        TMP_Text textTemp = textObj.GetComponent<TMP_Text>();
+        textTemp.text = PlayerPrefs.GetFloat("AirAttack").ToString();
         enemyCreate.LoseLife(PlayerPrefs.GetFloat("AirAttack"));
+        Destroy(textObj, 1f);
         //ResetMagicWhenUse();
         
     }
@@ -74,6 +77,9 @@ public class PlayerPowers : MonoBehaviour
     public void UltimatePower()
     {
         float ultimateDamage = enemyCreate.enemyLifeMax / 2;
+        GameObject textObj = Instantiate(enemyDamagedTxt);
+        TMP_Text textTemp = textObj.GetComponent<TMP_Text>();
+        textTemp.text = ultimateDamage.ToString();
         enemyCreate.LoseLife(ultimateDamage);
         //ResetMagicWhenUse();
     }
