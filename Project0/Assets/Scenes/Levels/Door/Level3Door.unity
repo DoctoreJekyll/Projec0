@@ -997,26 +997,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 660305115}
-    - target: {fileID: 4411882269849551230, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HealthPower
-      objectReference: {fileID: 0}
     - target: {fileID: 4411882270684654802, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 660305115}
-    - target: {fileID: 4411882270684654802, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: InstantiateUltimateAttack
-      objectReference: {fileID: 0}
     - target: {fileID: 4411882271412844496, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 660305115}
-    - target: {fileID: 4411882271412844496, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: InstantiateAirAttack
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
 --- !u!1 &512660004 stripped
