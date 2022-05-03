@@ -114,7 +114,7 @@ public class HubManager : MonoBehaviour
 
     private void IncreaseLevelUpCost()
     {
-        int increasePerLevel = 10;
+        int increasePerLevel = 20;
         int newLevelUpCost = PlayerPrefs.GetInt("LevelUpCost") + increasePerLevel;
         PlayerPrefs.SetInt("LevelUpCost", newLevelUpCost);
     }
@@ -153,7 +153,7 @@ public class HubManager : MonoBehaviour
         {
             int newAmountGold = PlayerPrefs.GetInt("Gold") - PlayerPrefs.GetInt("LevelUpHearthCost");
             PlayerPrefs.SetInt("Gold", newAmountGold);
-            float damageToAdd = 20f;
+            float damageToAdd = 25f;
             float newAirDamage = PlayerPrefs.GetFloat("Health") + damageToAdd;
             PlayerPrefs.SetFloat("Health", newAirDamage);
 
@@ -172,7 +172,7 @@ public class HubManager : MonoBehaviour
 
     private void IncreaseLevelUpHealthCost()
     {
-        int increasePerLevel = 20;
+        int increasePerLevel = 30;
         int newLevelUpCost = PlayerPrefs.GetInt("LevelUpHearthCost") + increasePerLevel;
         PlayerPrefs.SetInt("LevelUpHearthCost", newLevelUpCost);
     }
@@ -184,7 +184,7 @@ public class HubManager : MonoBehaviour
         {
             int newAmountGold = PlayerPrefs.GetInt("Gold") - PlayerPrefs.GetInt("LevelUpAirCost");
             PlayerPrefs.SetInt("Gold", newAmountGold);
-            float damageToAdd = 10f;
+            float damageToAdd = 20f;
             float newAirDamage = PlayerPrefs.GetFloat("AirAttack") + damageToAdd;
             PlayerPrefs.SetFloat("AirAttack", newAirDamage);
 
@@ -203,7 +203,7 @@ public class HubManager : MonoBehaviour
 
     private void IncreaseLevelUpAirCost()
     {
-        int increasePerLevel = 15;
+        int increasePerLevel = 25;
         int newLevelUpCost = PlayerPrefs.GetInt("LevelUpAirCost") + increasePerLevel;
         PlayerPrefs.SetInt("LevelUpAirCost", newLevelUpCost);
     }

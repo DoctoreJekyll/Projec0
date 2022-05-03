@@ -2755,6 +2755,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 207703404, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 275143343, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
       propertyPath: dieRewardGoldTxt
       value: 

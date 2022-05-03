@@ -174,10 +174,12 @@ public class EnemyCreate : MonoBehaviour
 
     public void GiveGoldToPlayer()
     {
-        PlayerData playerData = FindObjectOfType<PlayerData>();
-        playerData.gold += goldDropped;
-        PlayerPrefs.SetInt("Gold", playerData.gold);
-        PlayerPrefs.Save();     
-
+        if (index < enemyData.Length)
+        {
+            PlayerData playerData = FindObjectOfType<PlayerData>();
+            playerData.gold += goldDropped;
+            PlayerPrefs.SetInt("Gold", playerData.gold);
+            PlayerPrefs.Save();
+        }
     }
 }
