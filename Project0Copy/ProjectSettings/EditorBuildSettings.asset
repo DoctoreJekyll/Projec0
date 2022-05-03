@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Castle/Level6Castle.unity
     guid: 69713cac3670ed44e96a87abdbbd0786
+  - enabled: 1
+    path: Assets/Scenes/Levels/Init/Credits.unity
+    guid: c33d3a2a404308146af8bf70419b36b3
   m_configObjects: {}
