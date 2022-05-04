@@ -90,6 +90,7 @@ public class PlayerData : MonoBehaviour
     {      
         PlayerDie();
         GoldBag();
+        GoldCap();
 
         if (life > maxLife)
         {
@@ -121,5 +122,16 @@ public class PlayerData : MonoBehaviour
         gold = PlayerPrefs.GetInt("Gold");
     }
 
+
+    private void GoldCap()
+    {
+        int cap = 999999;
+
+        if (PlayerPrefs.GetInt("Gold") > cap)
+        {
+            PlayerPrefs.SetInt("Gold", cap);
+            PlayerPrefs.Save();
+        }
+    }
 
 }
