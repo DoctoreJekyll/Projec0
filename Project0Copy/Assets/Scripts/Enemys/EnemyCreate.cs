@@ -128,7 +128,11 @@ public class EnemyCreate : MonoBehaviour
             LoadNextScriptable();
         }
 
-        StartCoroutine(FadeToOne(1, 0.3f));
+        if (index < enemyData.Length)
+        {
+            StartCoroutine(FadeToOne(1, 0.3f));
+        }
+
 
     }
 

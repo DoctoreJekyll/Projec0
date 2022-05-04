@@ -114,7 +114,7 @@ public class HubManager : MonoBehaviour
 
     private void IncreaseLevelUpCost()
     {
-        int increasePerLevel = 20;
+        int increasePerLevel = 25;
         int newLevelUpCost = PlayerPrefs.GetInt("LevelUpCost") + increasePerLevel;
         PlayerPrefs.SetInt("LevelUpCost", newLevelUpCost);
     }
@@ -172,7 +172,7 @@ public class HubManager : MonoBehaviour
 
     private void IncreaseLevelUpHealthCost()
     {
-        int increasePerLevel = 30;
+        int increasePerLevel = 35;
         int newLevelUpCost = PlayerPrefs.GetInt("LevelUpHearthCost") + increasePerLevel;
         PlayerPrefs.SetInt("LevelUpHearthCost", newLevelUpCost);
     }
@@ -203,7 +203,7 @@ public class HubManager : MonoBehaviour
 
     private void IncreaseLevelUpAirCost()
     {
-        int increasePerLevel = 25;
+        int increasePerLevel = 30;
         int newLevelUpCost = PlayerPrefs.GetInt("LevelUpAirCost") + increasePerLevel;
         PlayerPrefs.SetInt("LevelUpAirCost", newLevelUpCost);
     }

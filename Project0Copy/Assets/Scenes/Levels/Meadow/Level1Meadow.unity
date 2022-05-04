@@ -1771,17 +1771,6 @@ Transform:
   m_Father: {fileID: 1201890688}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1161264189 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1262733635, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
-  m_PrefabInstance: {fileID: 1480391676039403980}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1201890686
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,7 +2707,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -3094403840310846005, guid: 4540fb33c4be8d0458cc7a512e6dc628, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 514cfd209b1aeff40bc4946e21c15a9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2738,7 +2727,7 @@ Transform:
   m_GameObject: {fileID: 2095937950}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.20612964, y: 0.2938, z: 0}
-  m_LocalScale: {x: 0.16450886, y: 0.19464652, z: 1}
+  m_LocalScale: {x: 0.27023914, y: 0.30380967, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1045977249}
@@ -2761,7 +2750,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.53333336, y: 0.53333336}
+    oldSize: {x: 0.33, y: 0.32}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2808,14 +2797,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 207703404, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 275143343, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
-      propertyPath: dieRewardGoldTxt
-      value: 
-      objectReference: {fileID: 1161264189}
     - target: {fileID: 372544336, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2823,10 +2804,6 @@ PrefabInstance:
     - target: {fileID: 1480391675877420930, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1480391675877420930, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1480391675877420957, guid: bfb9304911025c74185b39385ce2b4cf, type: 3}
       propertyPath: m_Camera
