@@ -2669,10 +2669,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData:
+  - {fileID: 11400000, guid: 1ee6fa0082fe49a4e8ea9a11e43c1df2, type: 2}
   - {fileID: 11400000, guid: f62861e8cb00e3f4096b325040ab4ec4, type: 2}
+  - {fileID: 11400000, guid: 8bb32d557cec24c43bfd7629a7767750, type: 2}
   - {fileID: 11400000, guid: 6e3135f45e19a94469088981c2cb9236, type: 2}
   - {fileID: 11400000, guid: 4461e78e4dd88524a8cb43afccece8fe, type: 2}
   - {fileID: 11400000, guid: 9d27f829a87313c4880059519ab5f456, type: 2}
+  - {fileID: 11400000, guid: c4d091e5bd27f1a439dc860b90c4fa1d, type: 2}
   - {fileID: 11400000, guid: 1af519d0eb98b0b49bccd0c3f3c3d8fd, type: 2}
   - {fileID: 11400000, guid: 9e6d9de3687531244b5e3ddc2088517a, type: 2}
   enemyName: 

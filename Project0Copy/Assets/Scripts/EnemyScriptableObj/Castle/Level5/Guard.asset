@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Guard
   enemyLevel: 50
-  enemyAttack: 300
-  enemyLife: 800
-  gold: 100
+  enemyAttack: 400
+  enemyLife: 900
+  gold: 110
   enemySprite: {fileID: 4723107735738678597, guid: 152ef7bee4939d741be81eb13ffe02ea, type: 3}

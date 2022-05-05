@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Black Magus
   enemyLevel: 45
-  enemyAttack: 350
-  enemyLife: 1200
+  enemyAttack: 450
+  enemyLife: 1350
   gold: 120
   enemySprite: {fileID: 21300000, guid: ea65697fd34c1b74583b5d37bb189fc7, type: 3}

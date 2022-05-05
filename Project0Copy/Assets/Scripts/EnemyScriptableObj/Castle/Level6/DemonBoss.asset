@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Demon
   enemyLevel: 60
-  enemyAttack: 1000
-  enemyLife: 2000
+  enemyAttack: 1250
+  enemyLife: 3000
   gold: 1000
   enemySprite: {fileID: 9083683855015346827, guid: f80589ba758c9094e8dece469e2e29e8, type: 3}

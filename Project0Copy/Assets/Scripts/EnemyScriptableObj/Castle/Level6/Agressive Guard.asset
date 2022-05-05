@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Power Guard
   enemyLevel: 58
-  enemyAttack: 450
-  enemyLife: 1450
-  gold: 80
+  enemyAttack: 550
+  enemyLife: 1500
+  gold: 100
   enemySprite: {fileID: 710405504474814621, guid: aab89d59683ce614b9a42fb0288038de, type: 3}
