@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Minotaurion
   enemyLevel: 46
-  enemyAttack: 350
-  enemyLife: 1200
+  enemyAttack: 375
+  enemyLife: 1300
   gold: 80
   enemySprite: {fileID: 21300000, guid: 0b1c0900c457f2541bdc96876f8e6d6e, type: 3}

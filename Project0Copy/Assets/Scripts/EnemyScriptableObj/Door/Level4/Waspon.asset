@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Waspon
   enemyLevel: 40
-  enemyAttack: 200
-  enemyLife: 700
+  enemyAttack: 250
+  enemyLife: 750
   gold: 80
   enemySprite: {fileID: 21300000, guid: 999f14ae014bad64ebe8d50976d12c95, type: 3}

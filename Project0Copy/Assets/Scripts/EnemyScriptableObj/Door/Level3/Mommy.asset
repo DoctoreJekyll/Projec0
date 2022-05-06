@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Mommy
   enemyLevel: 28
-  enemyAttack: 120
-  enemyLife: 400
+  enemyAttack: 140
+  enemyLife: 450
   gold: 40
   enemySprite: {fileID: 21300000, guid: ae91192782767564cab2fc2fdf4f5635, type: 3}

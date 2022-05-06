@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Angel
   enemyLevel: 50
-  enemyAttack: 400
+  enemyAttack: 425
   enemyLife: 1000
   gold: 120
   enemySprite: {fileID: 21300000, guid: 89848493b6770934897f103d055ccf69, type: 3}

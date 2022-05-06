@@ -11,5 +11,9 @@ public class StartSceneInn : MonoBehaviour
         SceneManager.LoadScene("Hub");
     }
 
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 
 }

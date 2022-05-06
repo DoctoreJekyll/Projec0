@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Devil Beast
   enemyLevel: 56
-  enemyAttack: 600
+  enemyAttack: 650
   enemyLife: 1000
   gold: 100
   enemySprite: {fileID: 1487279022005020668, guid: 9f6f5817c8d389d449068671ea4f4df1, type: 3}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Power Angel
   enemyLevel: 58
-  enemyAttack: 800
-  enemyLife: 1800
+  enemyAttack: 900
+  enemyLife: 2000
   gold: 500
   enemySprite: {fileID: 21300000, guid: 3f7f8292cbc9a86429595db07536f458, type: 3}

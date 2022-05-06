@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Sorcerer
   enemyLevel: 38
-  enemyAttack: 160
-  enemyLife: 600
+  enemyAttack: 180
+  enemyLife: 625
   gold: 60
   enemySprite: {fileID: 21300000, guid: 42a40d9e900c03f449eb5a6a33db5041, type: 3}

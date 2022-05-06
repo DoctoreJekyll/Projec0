@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Hell Beast
   enemyLevel: 40
-  enemyAttack: 250
-  enemyLife: 800
+  enemyAttack: 275
+  enemyLife: 825
   gold: 80
   enemySprite: {fileID: -446198063759132195, guid: 9c7001b0b699c7b4cb41f5affb1a8391, type: 3}

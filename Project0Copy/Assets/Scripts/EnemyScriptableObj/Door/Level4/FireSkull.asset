@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Fire Skull
   enemyLevel: 30
-  enemyAttack: 80
-  enemyLife: 300
+  enemyAttack: 90
+  enemyLife: 325
   gold: 60
   enemySprite: {fileID: -7129419709214212761, guid: 0d5ca947fa8a68b4785e137a3b31a845, type: 3}

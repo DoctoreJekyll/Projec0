@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Skely
   enemyLevel: 20
-  enemyAttack: 60
-  enemyLife: 100
+  enemyAttack: 75
+  enemyLife: 125
   gold: 40
   enemySprite: {fileID: 21300000, guid: ad7da55222ce8294e85c0bdf0e14e1f8, type: 3}

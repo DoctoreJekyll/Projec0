@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Graveyerd
   enemyLevel: 24
-  enemyAttack: 100
-  enemyLife: 350
+  enemyAttack: 120
+  enemyLife: 375
   gold: 40
   enemySprite: {fileID: 21300000, guid: c423389212a62254da5810efb1b5a17c, type: 3}

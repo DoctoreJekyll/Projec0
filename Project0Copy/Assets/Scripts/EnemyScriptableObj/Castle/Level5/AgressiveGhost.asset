@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Agrresive Ghost
   enemyLevel: 48
-  enemyAttack: 220
-  enemyLife: 800
+  enemyAttack: 240
+  enemyLife: 825
   gold: 80
   enemySprite: {fileID: -7974593361352643873, guid: 6ca81faf91a59d141859ee77082a5ddd, type: 3}

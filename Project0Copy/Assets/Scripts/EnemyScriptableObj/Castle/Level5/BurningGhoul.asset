@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Burning Ghoul
   enemyLevel: 46
-  enemyAttack: 275
+  enemyAttack: 300
   enemyLife: 800
   gold: 100
   enemySprite: {fileID: -1453118518473198867, guid: 1f6653df759a2b14b928723d5720c04f, type: 3}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Lamper Ghost
   enemyLevel: 44
-  enemyAttack: 180
-  enemyLife: 700
+  enemyAttack: 200
+  enemyLife: 750
   gold: 80
   enemySprite: {fileID: 21300000, guid: 41e6228c30540a446adaf3c8048d75d3, type: 3}

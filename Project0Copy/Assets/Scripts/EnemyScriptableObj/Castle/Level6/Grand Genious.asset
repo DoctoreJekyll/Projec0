@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Grand Genious
   enemyLevel: 55
-  enemyAttack: 500
-  enemyLife: 900
+  enemyAttack: 550
+  enemyLife: 1000
   gold: 120
   enemySprite: {fileID: 21300000, guid: 4bfdaeb76944b484896f010f64a89014, type: 3}

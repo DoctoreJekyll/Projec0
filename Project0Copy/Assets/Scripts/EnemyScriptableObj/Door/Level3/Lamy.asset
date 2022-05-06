@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Lamy
   enemyLevel: 22
-  enemyAttack: 60
-  enemyLife: 200
+  enemyAttack: 80
+  enemyLife: 220
   gold: 40
   enemySprite: {fileID: 21300000, guid: d465d5397ee2b8245bd62afe8d1a2906, type: 3}

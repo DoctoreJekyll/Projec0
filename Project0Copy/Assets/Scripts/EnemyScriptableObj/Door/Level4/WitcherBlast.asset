@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Super Witcher
   enemyLevel: 40
-  enemyAttack: 260
-  enemyLife: 900
+  enemyAttack: 300
+  enemyLife: 950
   gold: 80
   enemySprite: {fileID: 6597481699637694506, guid: 2eb9ca31840725d43894940bbb896c9c, type: 3}

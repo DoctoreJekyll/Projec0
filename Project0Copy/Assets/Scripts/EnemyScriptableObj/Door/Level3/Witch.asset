@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Witch
   enemyLevel: 30
-  enemyAttack: 150
-  enemyLife: 550
+  enemyAttack: 175
+  enemyLife: 600
   gold: 60
   enemySprite: {fileID: 3234629978573100161, guid: 1e649df1105876041a98941b84429641, type: 3}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Frog Door
   enemyLevel: 20
-  enemyAttack: 40
-  enemyLife: 200
+  enemyAttack: 50
+  enemyLife: 225
   gold: 40
   enemySprite: {fileID: 21300000, guid: 090dcc1cd699f6b48a13154a367f5481, type: 3}

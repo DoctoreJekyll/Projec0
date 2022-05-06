@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Fire Horse
   enemyLevel: 52
-  enemyAttack: 300
-  enemyLife: 700
+  enemyAttack: 350
+  enemyLife: 750
   gold: 100
   enemySprite: {fileID: -63971724367585369, guid: ff29361907922b8429712bffd15448bd, type: 3}
