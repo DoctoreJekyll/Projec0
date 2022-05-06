@@ -31,7 +31,9 @@ public class GiveTheMoney : MonoBehaviour
 
     public void SetNewGoldAdsRewardAmoun()
     {
-        newGoldBeforeReward = PlayerPrefs.GetInt("Gold") / 2;
+        int randomExtraGold = Random.Range(1, 51);
+
+        newGoldBeforeReward = (PlayerPrefs.GetInt("Gold") / 2) + randomExtraGold;
     }
 
     public void ShowTxt()

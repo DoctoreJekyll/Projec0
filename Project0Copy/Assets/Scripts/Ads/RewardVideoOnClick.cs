@@ -34,7 +34,7 @@ public class RewardVideoOnClick : MonoBehaviour
     void Start()
     {
         MobileAds.Initialize(initStatus => { });
-        this.rewardedAd = new RewardedAd(rewardADFalse);
+        this.rewardedAd = new RewardedAd(rewardADTrue);
 
 
         // Called when an ad request has successfully loaded.
